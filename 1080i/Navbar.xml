@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Navbar">
+		<control type="image">
+			<description>Navbar</description>
+			<posx>15</posx>
+			<posy>15</posy>
+			<width>1890</width>
+			<height>60</height>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texture>home/navbar.png</texture>
+		</control>
+		<control type="label">
+			<posx>50</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>40</width>
+			<font>Symbol</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>K</label>
+			<align>left</align>
+		</control>
+		<control type="image">
+			<posx>80</posx>
+			<posy>26</posy>
+			<height>38</height>
+			<width>20</width>
+			<texture>home/navsep.png</texture>
+		</control>
+		<control type="label">
+			<posx>135</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>240</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>Filme</label>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="label">
+			<posx>115</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>240</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>TV-Serien</label>
+			<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+		</control>
+		<control type="label">
+			<posx>105</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>240</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>Konzerte</label>
+			<visible>Container.Content(musicvideos)</visible>
+		</control>
+		<control type="label">
+			<posx>105</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>240</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>Musik</label>
+			<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
+		</control>
+		<control type="image">
+			<posx>230</posx>
+			<posy>26</posy>
+			<height>38</height>
+			<width>20</width>
+			<texture>home/navsep.png</texture>
+			<visible>Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows)</visible>
+		</control>
+		<control type="label">
+			<posx>275</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>500</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>$INFO[ListItem.Title]</label>
+			<align>left</align>
+			<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
+		</control>
+		<control type="label">
+			<posx>275</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>240</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>Staffeln</label>
+			<align>left</align>
+			<visible>Container.Content(seasons)</visible>
+		</control>
+		<control type="label">
+			<posx>275</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>240</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>Episoden</label>
+			<align>left</align>
+			<visible>Container.Content(episodes)</visible>
+		</control>
+		<control type="label">
+			<posx>1835</posx>
+			<posy>7</posy>
+			<height>75</height>
+			<width>240</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>$INFO[System.Time]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>1870</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>40</width>
+			<font>Symbol</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>j</label>
+			<align>right</align>
+		</control>
+	</include>
+</includes>

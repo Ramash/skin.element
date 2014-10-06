@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="12">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Backgrounds</include>
+
+		<control type="image">
+			<posx>285</posx>
+			<posy>180</posy>
+			<width>1320</width>
+			<height>790</height>
+			<texture border="50" background="true">views/panel.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3">
+			<description>Button Area</description>
+			<posx>55</posx>
+			<posy>65</posy>
+			<width>1810</width>
+			<height>75</height>
+			<itemgap>2</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>3</onup>
+			<ondown>5</ondown>
+			<orientation>horizontal</orientation>
+		</control>
+		
+		<include>Navbar</include>
+		
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>330</posx>
+			<posy>250</posy>
+			<width>1230</width>
+			<height>685</height>
+			<itemgap>3</itemgap>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>5</ondown>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<textcolor>ElementGray</textcolor>
+			<focusedcolor>ElementGray</focusedcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<disabledcolor>88666666</disabledcolor>
+			<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+			<texturenofocus border="15,5,15,5">none</texturenofocus>
+			<align>left</align>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default Radio Button</description>
+			<textcolor>ElementGray</textcolor>
+			<focusedcolor>ElementGray</focusedcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<disabledcolor>88666666</disabledcolor>
+			<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+			<texturenofocus border="15,5,15,5">none</texturenofocus>
+			<radioposx>1130</radioposx>
+			<align>left</align>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default Spin Control</description>
+			<textcolor>ElementGray</textcolor>
+			<focusedcolor>ElementGray</focusedcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<disabledcolor>88666666</disabledcolor>
+			<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+			<texturenofocus border="15,5,15,5">none</texturenofocus>
+			<align>left</align>
+		</control>
+		<control type="button" id="10">
+			<width>360</width>
+			<height>75</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<font>SmallBold</font>
+			<label>-</label>
+			<textoffsetx>30</textoffsetx>
+			<textoffsety>12</textoffsety>
+			<textcolor>ElementGray</textcolor>
+			<focusedcolor>ElementGray</focusedcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<disabledcolor>88666666</disabledcolor>
+			<texturefocus border="15,5,15,5">settings/topbut.png</texturefocus>
+			<texturenofocus border="15,5,15,5">settings/topbut_n.png</texturenofocus>
+		</control>
+	</controls>
+</window>

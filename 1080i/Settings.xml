@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="4">
+	<defaultcontrol always="true">3110</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<texture background="true">settings/bg.jpg</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>1080</height>
+			<width>1920</width>
+			<texture background="true">home/bgfade.png</texture>
+		</control>
+		<control type="group">
+			<posx>300</posx>
+			<posy>150</posy>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="zoom" start="50" end="100" center="960,540" time="300" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="zoom" start="100" end="150" center="960,540" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<control type="image">
+				<posx>150</posx>
+				<posy>-30</posy>
+				<width>1000</width>
+				<height>750</height>
+				<texture background="true" border="10">settings/panel.png</texture>
+			</control>
+			<control type="label">
+				<posx>150</posx>
+				<width>1000</width>
+				<posy>-17</posy>
+				<font>MediumBold</font>
+				<textcolor>99000000</textcolor>
+				<shadowcolor>ccffffff</shadowcolor>
+				<label>element . settings</label>
+				<align>center</align>
+			</control>
+			<control type="group" id="3110">
+				<posx>280</posx>
+				<posy>105</posy>
+				<width>600</width>
+				<height>900</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<control type="button" id="3117">
+					<description>Appearance settings</description>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[480]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/appear_n.png</texturenofocus>
+					<texturefocus>settings/appear_h.png</texturefocus>
+					<onclick>activatewindow(AppearanceSettings)</onclick>
+					<onup></onup>
+					<ondown>3118</ondown>
+					<onleft></onleft>
+					<onright>3122</onright>
+				</control>
+				<control type="button" id="3118">
+					<description>Video settings</description>
+					<posx>0</posx>
+					<posy>120</posy>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[3]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/video_n.png</texturenofocus>
+					<texturefocus>settings/video_h.png</texturefocus>
+					<onclick>activatewindow(VideosSettings)</onclick>
+					<onup>3117</onup>
+					<ondown>3119</ondown>
+					<onleft></onleft>
+					<onright>3123</onright>
+				</control>
+				<control type="button" id="3119">
+					<description>Music settings</description>
+					<posx>0</posx>
+					<posy>240</posy>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[2]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/music_n.png</texturenofocus>
+					<texturefocus>settings/music_h.png</texturefocus>
+					<onclick>activatewindow(MusicSettings)</onclick>
+					<onup>3118</onup>
+					<ondown>3120</ondown>
+					<onleft></onleft>
+					<onright>3124</onright>
+				</control>
+				<control type="button" id="3120">
+					<description>Addon settings</description>
+					<posx>0</posx>
+					<posy>360</posy>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[24001]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/addon_n.png</texturenofocus>
+					<texturefocus>settings/addon_h.png</texturefocus>
+					<onclick>activatewindow(AddonBrowser)</onclick>
+					<onup>3119</onup>
+					<ondown>3121</ondown>
+					<onleft></onleft>
+					<onright>3125</onright>
+				</control>
+				<control type="button" id="3121">
+					<description>Picture settings</description>
+					<posx>0</posx>
+					<posy>480</posy>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[1]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/picture_n.png</texturenofocus>
+					<texturefocus>settings/picture_h.png</texturefocus>
+					<onclick>activatewindow(PicturesSettings)</onclick>
+					<onup>3120</onup>
+					<ondown></ondown>
+					<onleft></onleft>
+					<onright>3126</onright>
+				</control>
+				<control type="button" id="3122">
+					<description>Weather settings</description>
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[8]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/weather_n.png</texturenofocus>
+					<texturefocus>settings/weather_h.png</texturefocus>
+					<onclick>activatewindow(WeatherSettings)</onclick>
+					<onup></onup>
+					<ondown>3123</ondown>
+					<onleft>3117</onleft>
+					<onright></onright>
+				</control>
+				<control type="button" id="3123">
+					<description>Network settings</description>
+					<posx>450</posx>
+					<posy>120</posy>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[705]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/network_n.png</texturenofocus>
+					<texturefocus>settings/network_h.png</texturefocus>
+					<onclick>activatewindow(NetworkSettings)</onclick>
+					<onup>3122</onup>
+					<ondown>3124</ondown>
+					<onleft>3118</onleft>
+					<onright></onright>
+				</control>
+				<control type="button" id="3124">
+					<description>System settings</description>
+					<posx>450</posx>
+					<posy>240</posy>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[13000]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/system_n.png</texturenofocus>
+					<texturefocus>settings/system_h.png</texturefocus>
+					<onclick>activatewindow(SystemSettings)</onclick>
+					<onup>3123</onup>
+					<ondown>3125</ondown>
+					<onleft>3119</onleft>
+					<onright></onright>
+				</control>
+				<control type="button" id="3125">
+					<description>Profiles settings</description>
+					<posx>450</posx>
+					<posy>360</posy>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[13200]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/profile_n.png</texturenofocus>
+					<texturefocus>settings/profile_h.png</texturefocus>
+					<onclick>activatewindow(Profiles)</onclick>
+					<onup>3124</onup>
+					<ondown>3126</ondown>
+					<onleft>3120</onleft>
+					<onright></onright>
+				</control>
+				<control type="button" id="3126">
+					<description>System Info</description>
+					<posx>450</posx>
+					<posy>480</posy>
+					<width>400</width>
+					<height>64</height>
+					<font>Medium</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>$LOCALIZE[130]</label>
+					<align>left</align>
+					<textoffsetx>100</textoffsetx>
+					<texturenofocus>settings/info_n.png</texturenofocus>
+					<texturefocus>settings/info_h.png</texturefocus>
+					<onclick>activatewindow(7)</onclick>
+					<onup>3125</onup>
+					<ondown>3127</ondown>
+					<onleft>3121</onleft>
+					<onright></onright>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
