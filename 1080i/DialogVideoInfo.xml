@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="2003">
+	<onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
@@ -227,6 +228,15 @@
 					<label>20410</label>
 					<width>383</width>
 				</control>
+				<!--VideoExtras start-->
+        		<control type="button" id="105">
+    				<description>Extras</description>
+    				<label>Extras</label>
+    				<width>383</width>
+    				<onclick>XBMC.RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
+    				<visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
+				</control>
+				<!--End-->
 				<control type="button" id="10">
 					<description>Get Thumb</description>
 					<label>13405</label>
