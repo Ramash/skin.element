@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="Poster">
+		<description>Poster View (id=745)</description>
+		
+		<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>1080</height>
+				<texture background="true">views/sidebar.png</texture>
+				<visible>Control.IsVisible(745)</visible>
+		</control>
+		
+		<control type="group">
+			<animation effect="slide" start="0,0" end="400,0" time="500">UnFocus</animation>
+			<animation effect="slide" start="400,0" end="0,0" time="500">Focus</animation>
+			<visible>Control.IsVisible(745)</visible>
+			
+			
+			<include>Backgrounds</include>
+			<include>Navbar</include>
+
+		<control type="fixedlist" id="745">
+			<viewtype label="Poster">bigwide</viewtype>
+			<posx>0</posx>
+			<posy>350</posy>
+			<width>1920</width>
+			<height>900</height>
+			<onleft>745</onleft>
+			<onright>745</onright>
+			<onup>9000</onup>
+			<ondown>70001</ondown>
+			<pagecontrol>70001</pagecontrol>
+			<orientation>horizontal</orientation>
+			<focusposition>3</focusposition>
+			<scrolltime>750</scrolltime>
+			<preloaditems>2</preloaditems>
+			
+			<itemlayout width="250" height="800">
+				<control type="image">
+					<posx>0</posx>
+					<posy>471</posy>
+					<width>200</width>
+					<height>300</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>	
+					<texture background="true" diffuse="home/case_reflection_full.png" flipy="true">$INFO[ListItem.Art(poster)]</texture>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>143</posy>
+					<width>190</width>
+					<fadetime>0</fadetime>
+					<texture background="true">home/case_shadow.png</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>170</posy>
+					<width>200</width>
+					<height>300</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>	
+					<texture diffuse="home/case_diffuse_full.png" background="true">$INFO[ListItem.Label,genres/,.jpg]</texture>
+					<visible>Container.Content(genre)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>170</posy>
+					<width>200</width>
+					<height>300</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>	
+					<texture diffuse="home/case_diffuse_full.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>-10</posx>
+					<posy>210</posy>
+					<width>200</width>
+					<height>200</height>
+					<fadetime>0</fadetime>
+					<texture flipx="true">views/return.png</texture>
+					<visible>IsEmpty(ListItem.Label) + IsEmpty(ListItem.Art(thumb))</visible>
+				</control>
+				
+				
+				<control type="group">
+					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)]</visible>
+					<control type="image" id="87000">
+						<posx>0</posx>
+						<posy>471</posy>
+						<width>200</width>
+						<height>300</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="home/case_reflection_full.png" flipy="true">other_textures/gray-back.png</texture>
+					</control>
+					<control type="image" id="87001">
+						<posx>0</posx>
+						<posy>171</posy>
+						<width>200</width>
+						<height>300</height>
+						<aspectratio>stretch</aspectratio>
+						<texture diffuse="home/case_diffuse_full.png" background="true">other_textures/gray-back.png</texture>
+					</control>
+					<control type="label">
+						<posx>100</posx>
+						<posy>290</posy>
+						<width>300</width>
+						<align>center</align>
+						<font>SmallBold</font>
+						<textcolor>White</textcolor>
+						<shadowcolor>ElementGray</shadowcolor>
+						<angle>90</angle>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!IsEmpty(ListItem.Label)</visible>
+					</control>
+				</control>
+								
+				<control type="image">
+					<posx>-5</posx>
+					<posy>166</posy>
+					<width>209</width>
+					<height>308</height>
+					<fadetime>0</fadetime>
+					<texture background="true">home/case_full.png</texture>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>150</posx>
+					<posy>185</posy>
+					<width>56</width>
+					<height>36</height>
+					<texture background="true">$INFO[ListItem.Overlay]</texture>
+					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				</control>
+				
+			</itemlayout>
+			
+			
+			<focusedlayout width="250" height="800">
+				<include>PosterInfo</include>
+				
+				<control type="group">
+					<animation type="Focus">
+						<effect type="zoom" delay="300" start="100" end="200" time="500" center="102,338" />
+					</animation>
+					<animation type="UnFocus">
+						<effect type="zoom" delay="300" start="200" end="100" time="500" center="102,338" />
+					</animation>
+					
+					
+				<control type="image">
+					<posx>0</posx>
+					<posy>471</posy>
+					<width>200</width>
+					<height>300</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>	
+					<texture background="true" diffuse="home/case_reflection_full.png" flipy="true">$INFO[ListItem.Art(poster)]</texture>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>143</posy>
+					<width>190</width>
+					<fadetime>0</fadetime>
+					<texture background="true">home/case_shadow.png</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>170</posy>
+					<width>200</width>
+					<height>300</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>	
+					<texture diffuse="home/case_diffuse_full.png" background="true">$INFO[ListItem.Label,genres/,.jpg]</texture>
+					<visible>Container.Content(genre)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>170</posy>
+					<width>200</width>
+					<height>300</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>	
+					<texture diffuse="home/case_diffuse_full.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				
+				<control type="group">
+					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)]</visible>
+					<control type="image" id="87000">
+						<posx>0</posx>
+						<posy>471</posy>
+						<width>200</width>
+						<height>300</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="home/case_reflection_full.png" flipy="true">other_textures/gray-back.png</texture>
+					</control>
+					<control type="image" id="87001">
+						<posx>0</posx>
+						<posy>171</posy>
+						<width>200</width>
+						<height>300</height>
+						<aspectratio>stretch</aspectratio>
+						<texture diffuse="home/case_diffuse_full.png" background="true">other_textures/gray-back.png</texture>
+					</control>
+					<control type="label">
+						<posx>100</posx>
+						<posy>290</posy>
+						<width>300</width>
+						<align>center</align>
+						<font>SmallBold</font>
+						<textcolor>White</textcolor>
+						<shadowcolor>ElementGray</shadowcolor>
+						<angle>90</angle>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!IsEmpty(ListItem.Label)</visible>
+					</control>
+				</control>
+								
+				<control type="image">
+					<posx>-5</posx>
+					<posy>166</posy>
+					<width>209</width>
+					<height>308</height>
+					<fadetime>0</fadetime>
+					<texture background="true">home/case_full.png</texture>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>150</posx>
+					<posy>185</posy>
+					<width>56</width>
+					<height>36</height>
+					<texture background="true">$INFO[ListItem.Overlay]</texture>
+					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				</control>
+				</control>
+				
+				<control type="image">
+					<posx>-10</posx>
+					<posy>210</posy>
+					<width>200</width>
+					<height>200</height>
+					<fadetime>0</fadetime>
+					<texture flipx="true">views/return.png</texture>
+					<visible>IsEmpty(ListItem.Label) + IsEmpty(ListItem.Art(poster))</visible>
+				</control>
+				
+				
+			</focusedlayout>
+		</control>
+		
+		<control type="group">
+			<control type="scrollbar" id="70001">
+				<posx>23</posx>
+				<posy>1049</posy>
+				<width>1874</width>
+				<height>31</height>
+				<onleft>70001</onleft>
+				<onright>70001</onright>
+				<onup>745</onup>
+				<ondown>745</ondown>
+				<orientation>horizontal</orientation>
+				<texturesliderbackground>other_textures/ScrollbarBg.png</texturesliderbackground>
+				<textureslidernib>other_textures/ScrollbarNib.png</textureslidernib>
+				<textureslidernibfocus>other_textures/ScrollbarNib.png</textureslidernibfocus>
+				<texturesliderbar>none</texturesliderbar>
+				<texturesliderbarfocus>none</texturesliderbarfocus>
+				<visible allowhiddenfocus="true">Control.HasFocus(70001)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>1049</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture background="true">other_textures/ScrollbarSide.png</texture>
+				<visible>Control.HasFocus(70001)</visible>
+			</control>
+			<control type="image">
+				<posx>1897</posx>
+				<posy>1049</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture background="true" flipx="true">other_textures/ScrollbarSide.png</texture>
+				<visible>Control.HasFocus(70001)</visible>
+			</control>
+		</control>
+		
+		</control>
+	</include>
+</includes>

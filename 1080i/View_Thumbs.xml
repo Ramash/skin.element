@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="Thumbs">
+		<description>Thumbs View (id=770)</description>
+		
+		<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>1080</height>
+				<texture background="true">views/sidebar.png</texture>
+				<visible>Control.IsVisible(770)</visible>
+		</control>
+		
+		<control type="group">
+			<animation effect="slide" start="0,0" end="400,0" time="500">UnFocus</animation>
+			<animation effect="slide" start="400,0" end="0,0" time="500">Focus</animation>
+			<visible>Control.IsVisible(770)</visible>
+
+			<include>Backgrounds</include>
+			<include>Navbar</include>
+			
+			<control type="fixedlist" id="770">
+				<posx>0</posx>
+				<posy>280</posy>
+				<width>1920</width>
+				<height>1080</height>
+				<onleft>770</onleft>
+				<onright>770</onright>
+				<onup>9000</onup>
+				<ondown>60</ondown>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="Thumbs">list</viewtype>
+				<orientation>horizontal</orientation>
+				<scrolltime>500</scrolltime>
+				<focusposition>1</focusposition>
+				<preloaditems>2</preloaditems>
+				<animation effect="rotatey" center="50" start="16" end="16" time="0" condition="true">Conditional</animation>
+				<visible>!Window.IsActive(movieinformation) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(musicvideos)]</visible>				
+				
+				<itemlayout width="400" height="800">
+					<control type="group">
+						
+						<control type="image">
+							<posx>20</posx>
+							<posy>540</posy>
+							<height>540</height>
+							<width>360</width>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture background="true" diffuse="home/case_reflection_full.png" flipy="true">$INFO[ListItem.Art(poster)]</texture>
+						</control>
+						
+						<control type="image">
+							<posx>20</posx>
+							<posy>490</posy>
+							<height>100</height>
+							<width>360</width>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture background="true">home/case_shadow.png</texture>
+						</control>
+											
+						<control type="image">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>540</height>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture diffuse="home/case_diffuse_full.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+						</control>
+						
+											
+						<control type="image">
+							<posx>12</posx>
+							<posy>-8</posy>
+							<width>375</width>
+							<height>555</height>
+							<texture background="true">home/case_full.png</texture>
+						</control>
+						
+						<control type="image">
+							<posx>304</posx>
+							<posy>60</posy>
+							<width>85</width>
+							<height>55</height>
+							<texture background="true">$INFO[ListItem.Overlay]</texture>
+							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						</control>
+				
+					</control>
+				</itemlayout>
+				<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1920</width>
+							<height>1080</height>
+							<texture background="true">other_textures/black-back.png</texture>
+							<animation condition="![Container.OnNext | Container.OnPrevious]" type="Conditional">
+								<effect type="fade" delay="2000" start="0" end="100" time="500" />
+							</animation>
+
+						</control>
+				
+				<focusedlayout width="400" height="800">
+					
+					
+						
+					<control type="group">
+						<animation type="Focus">
+							<effect type="rotatey" start="0" end="-16" time="500" />
+							<effect type="zoom" delay="500" start="100" end="150" time="500" center="150,250" />
+						</animation>
+						<animation type="UnFocus">
+							<effect type="zoom" start="150" end="100" time="500" center="150,250" />
+							<effect type="rotatey" start="-16" end="0" time="500" />
+						</animation>
+						
+						
+						
+						
+						
+						<control type="image">
+							<posx>20</posx>
+							<posy>540</posy>
+							<height>540</height>
+							<width>360</width>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture background="true" diffuse="home/case_reflection_full.png" flipy="true">$INFO[ListItem.Art(poster)]</texture>
+						</control>
+						
+						<control type="image">
+							<posx>20</posx>
+							<posy>490</posy>
+							<height>100</height>
+							<width>360</width>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture background="true">home/case_shadow.png</texture>
+						</control>
+						
+							
+						<control type="image">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>360</width>
+							<height>540</height>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture diffuse="home/case_diffuse_full.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+						</control>
+						
+						<control type="image">
+							<posx>12</posx>
+							<posy>-8</posy>
+							<width>375</width>
+							<height>555</height>
+							<texture background="true">home/case_full.png</texture>
+						</control>
+						
+						
+						
+						<control type="image">
+							<posx>304</posx>
+							<posy>60</posy>
+							<width>85</width>
+							<height>55</height>
+							<texture background="true">$INFO[ListItem.Overlay]</texture>
+							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						</control>
+						
+						<control type="image">
+							<posx>304</posx>
+							<posy>60</posy>
+							<width>85</width>
+							<height>55</height>
+							<texture background="true">$INFO[ListItem.Overlay]</texture>
+							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						</control>
+						
+						
+
+					</control>
+					
+					
+					
+				</focusedlayout>	
+			</control>
+			
+			<control type="group">
+				<visible allowhiddenfocus="true">![Container(770).OnPrevious | Container(770).OnNext] + Control.HasFocus(770)</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" delay="1500" start="0" end="100" time="500"/>
+					<effect type="slide" delay="1500" start="-200,0" end="0,0" time="500"/>
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="200"/>
+				</animation>
+				<control type="image">
+					<posx>900</posx>
+					<posy>110</posy>
+					<width>943</width>
+					<height>647</height>
+					<texture background="true">views/thumbpanel.png</texture>
+				</control>
+				<control type="label">
+					<posx>970</posx>
+					<posy>140</posy>
+					<width>830</width>
+					<font>LargeBold</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>.[LOWERCASE]$INFO[ListItem.Label][/LOWERCASE]</label>
+				</control>
+				
+				
+				<control type="textbox">
+					<posx>970</posx>
+					<posy>440</posy>
+					<width>830</width>
+					<height>280</height>
+					<font>XSmallSpace</font>
+					<align>justify</align>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Plot]</label>
+					<autoscroll delay="3000" time="3000" repeat="5000">true</autoscroll>
+				</control>
+				
+				
+				<control type="label">
+						<posx>970</posx>
+						<posy>275</posy>
+						<width min="100" max="830">auto</width>
+						<height>50</height>
+						<font>Small</font>
+						<align>left</align>
+						<textcolor>White</textcolor>
+						<shadowcolor>ElementGray</shadowcolor>
+						<label>$INFO[ListItem.Genre,[B]$LOCALIZE[31054][/B]: ,]</label>
+					</control>
+					<control type="label">
+						<posx>970</posx>
+						<posy>325</posy>
+						<width>800</width>
+						<height>50</height>
+						<font>Small</font>
+						<align>left</align>
+						<textcolor>White</textcolor>
+						<shadowcolor>ElementGray</shadowcolor>
+						<label>$INFO[ListItem.Year,[B]$LOCALIZE[31058][/B]: ,]</label>
+					</control>
+					<control type="label">
+						<posx>970</posx>
+						<posy>375</posy>
+						<width>1000</width>
+						<height>50</height>
+						<font>Small</font>
+						<align>left</align>
+						<textcolor>White</textcolor>
+						<shadowcolor>ElementGray</shadowcolor>
+						<label>[B]$LOCALIZE[31051][/B]:</label>
+					</control>
+					<control type="image">
+						<posx>1110</posx>
+						<posy>385</posy>
+						<width>151</width>
+						<height>32</height>
+						<texture background="true">stars/$INFO[ListItem.Rating].png</texture>
+					</control>
+					
+					<control type="image">
+						<posx>1070</posx>
+						<posy>220</posy>
+						<width>104</width>
+						<height>38</height>
+						<texture background="true" fallback="flags/other/fallback.png">flags/resolution/$INFO[ListItem.VideoResolution].png</texture>
+						<visible>![ListItem.IsFolder + !stringcompare(ListItem.Label,..) + SubString(Container.Folderpath,videodb://,left)]</visible>
+					</control>
+					<control type="image">
+						<posx>970</posx>
+						<posy>220</posy>
+						<width>74</width>
+						<height>42</height>
+						<texture background="true">flags/other/set.png</texture>
+						<visible>ListItem.IsFolder + !stringcompare(ListItem.Label,..) + SubString(Container.Folderpath,videodb://,left)</visible>
+					</control>
+					<control type="image">
+						<posx>970</posx>
+						<posy>220</posy>
+						<width>88</width>
+						<height>38</height>
+						<texture background="true" fallback="flags/other/fallback.png">flags/audio/$INFO[ListItem.AudioCodec].png</texture>
+						<visible>![ListItem.IsFolder + !stringcompare(ListItem.Label,..) + SubString(Container.Folderpath,videodb://,left)]</visible>
+					</control>
+
+				
+				
+				
+				
+				
+				
+				
+				
+
+				
+			</control>
+			
+		</control>
+	
+		<!--control type="scrollbar" id="60">
+			<posx>1317</posx>
+			<posy>51</posy>
+			<height>978</height>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
+			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
+		</control-->
+	</include>
+</includes>

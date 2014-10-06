@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<addon id="skin.element" version="0.0.1" name="element" provider-name="Ash">
+	<requires>
+		<import addon="xbmc.gui" version="5.0.1"/>
+		<import addon="script.artistslideshow" version="1.6.7"/>
+		<import addon="script.artwork.downloader" version="12.0.25"/>
+		<import addon="script.globalsearch" version="2.0.8"/>
+		<import addon="script.grab.fanart" version="0.13.0"/>
+		<import addon="script.skinshortcuts" version="0.3.4"/>
+		<import addon="script.tv.show.next.aired" version="6.0.10"/>
+		<import addon="script.watchlist" version="0.0.2"/>
+		<import addon="service.library.data.provider" version="0.0.4"/>
+	</requires>
+	<extension point="xbmc.gui.skin" effectslowdown="1.00" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary>element by Ash</summary>
+		<summary lang="de">element, von Ash</summary>
+		<disclaimer>Mouse and touchscreen use not supported</disclaimer>
+		<license>Attribution-NonCommercial-ShareAlike 3.0 Unported</license>
+	</extension>
+</addon>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+	<color name="Black">FF000000</color>
+	<color name="White">FFFFFFFF</color>
+	<color name="Red">FFFF0000</color>
+	<color name="Blue">FF0000FF</color>
+	<color name="Green">FF00FF00</color>
+	<color name="FanartDiffuse">66FFFFFF</color>
+	<color name="ElementBlue">FF0055CC</color>
+	<color name="ElementGray">99000000</color>
+	<color name="ElementWhite">CCFFFFFF</color>
+</colors>
