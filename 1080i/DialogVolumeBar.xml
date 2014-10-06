@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="104">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation type="WindowOpen">
+		<effect type="fade" start="0" end="100" time="300" />
+		<effect type="slide" tween="circle" easing="out" start="0,-50" end="0,0" time="300" />
+	</animation>
+	<animation type="WindowClose">
+		<effect delay="1000" tween="circle" easing="in" type="slide" start="0,0" end="0,-50" time="300" />
+		<effect delay="1000" type="fade" start="100" end="0" time="300" />
+	</animation>
+	<controls>
+		<control type="group">
+			<posx>1638</posx>
+			<posy>75</posy>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>256</width>
+				<height>90</height>
+				<texture>other_textures/VolPanel.png</texture>
+			</control>
+			<control type="group">
+				<posx>25</posx>
+				<posy>12</posy>
+				<visible>!player.passthrough</visible>
+				
+				<control type="label">
+					<description>Volume Logo</description>
+					<posx>0</posx>
+					<posy>10</posy>
+					<font>Symbol</font>
+					<textcolor>ElementWhite</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>(</label>
+				</control>
+				<control type="progress" id="1">
+					<description>progress control</description>
+					<posx>35</posx>
+					<posy>34</posy>
+					<width>160</width>
+					<height>15</height>
+					<info>Player.Volume</info>
+				</control>
+			</control>
+			<control type="group">
+				<visible>player.passthrough</visible>
+				<control type="image">
+					<description>Lite Volume Logo</description>
+					<posx>15</posx>
+					<posy>6</posy>
+					<width>60</width>
+					<height>53</height>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>Red</colordiffuse>
+					<texture>other_textures/VolumeIcon.png</texture>
+				</control>
+				<control type="label">
+					<description>Passthrough Label</description>
+					<posx>75</posx>
+					<posy>15</posy>
+					<width>495</width>
+					<height>30</height>
+					<label>29802</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

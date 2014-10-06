@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="0">
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>GlobalBackground</include>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Container(317).ListItem.Art(fanart)]</texture>
+			<visible>Control.HasFocus(317) + !IsEmpty(Container(317).ListItem.Art(fanart))</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Container(318).ListItem.Art(fanart)]</texture>
+			<visible>Control.HasFocus(318) + !IsEmpty(Container(318).ListItem.Art(fanart))</visible>
+		</control>
+		
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.1.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(0) + !IsEmpty(Window(Home).Property(LatestAlbum.1.Fanart))</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.2.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(1) + !IsEmpty[Window(Home).Property(LatestAlbum.2.Fanart)]</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.3.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(2) + !IsEmpty[Window(Home).Property(LatestAlbum.3.Fanart)]</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.4.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(3) + !IsEmpty[Window(Home).Property(LatestAlbum.4.Fanart)]</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.5.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(4) + !IsEmpty[Window(Home).Property(LatestAlbum.5.Fanart)]</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">home/bgfade.png</texture>
+		</control>
+		
+		<control type="group">
+			<visible>Control.HasFocus(111114)</visible>
+			<animation type="Visible">
+				<effect type="slide" tween="circle" easing="out" delay="1000" start="0,-50" end="0,0" time="500" />
+				<effect type="fade" delay="1000" start="0" end="100" time="500" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="slide" tween="circle" easing="in" delay="300" start="0,0" end="0,-50" time="500" />
+				<effect type="fade" delay="300" start="100" end="0" time="500" />
+			</animation>
+			
+			<control type="image">
+				<posx>29</posx>
+				<posy>60</posy>
+				<height>54</height>
+				<width>1862</width>
+				<texture background="true">home/subnav_info.png</texture>
+			</control>
+			<control type="label">
+				<posx>60</posx>
+				<posy>62</posy>
+				<font>XSmall</font>
+				<height>54</height>
+				<width>1862</width>
+				<align>left</align>
+				<textcolor>White</textcolor>
+				<shadowcolor>ElementGray</shadowcolor>
+				<label>$INFO[System.BatteryLevel,[B]> Battery:[/B] ,]</label>
+			</control>
+			<control type="label">
+				<posx>260</posx>
+				<posy>62</posy>
+				<font>XSmall</font>
+				<height>54</height>
+				<width>1862</width>
+				<align>left</align>
+				<textcolor>White</textcolor>
+				<shadowcolor>ElementGray</shadowcolor>
+				<label>$INFO[System.ScreenResolution,[B]> Resolution:[/B] ,]</label>
+			</control>
+			<control type="label">
+				<posx>795</posx>
+				<posy>62</posy>
+				<font>XSmall</font>
+				<height>54</height>
+				<width>1862</width>
+				<align>left</align>
+				<textcolor>White</textcolor>
+				<shadowcolor>ElementGray</shadowcolor>
+				<label>$INFO[System.CpuUsage,[B]> CPU:[/B] ,]</label>
+			</control>
+			<control type="label">
+				<posx>965</posx>
+				<posy>62</posy>
+				<font>XSmall</font>
+				<height>54</height>
+				<width>1862</width>
+				<align>left</align>
+				<textcolor>White</textcolor>
+				<shadowcolor>ElementGray</shadowcolor>
+				<label>$INFO[System.BuildVersion,[B]> Build:[/B] ,]</label>
+			</control>
+			<control type="label">
+				<posx>1370</posx>
+				<posy>62</posy>
+				<font>XSmall</font>
+				<height>54</height>
+				<width>1862</width>
+				<align>left</align>
+				<textcolor>White</textcolor>
+				<shadowcolor>ElementGray</shadowcolor>
+				<label>$INFO[System.InternetState,[B]> Network:[/B] ,]</label>
+			</control>
+		</control>
+		
+		
+		
+		<control type="image" id="2">
+			<description>Navbar</description>
+			<posx>15</posx>
+			<posy>15</posy>
+			<width>1890</width>
+			<height>60</height>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texture background="true">home/navbar.png</texture>
+		</control>
+		<control type="label">
+			<posx>50</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>40</width>
+			<font>Symbol</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>K</label>
+			<align>left</align>
+		</control>
+
+		<control type="list" id="300">
+			<description>Homelist</description>
+			<posx>86</posx>
+			<posy>7</posy>
+			<width>1800</width>
+			<height>100</height>
+			<orientation>horizontal</orientation>
+			<onup>300</onup>
+			<ondown condition="Container(300).HasFocus(8)">SetFocus(317,0)</ondown>
+			<ondown condition="Container(300).HasFocus(9)">SetFocus(318,0)</ondown>
+			<ondown condition="Container(300).HasFocus(11)">SetFocus(319,0)</ondown>
+			<onleft>300</onleft>
+			<onright>111114</onright>
+			<itemlayout width="170" height="75">
+				<control type="image">
+					<posx>0</posx>
+					<posy>21</posy>
+					<height>33</height>
+					<width>1</width>
+					<texture background="true">home/sep.png</texture>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>1</posy>
+					<height>75</height>
+					<width>240</width>
+					<font>Small</font>
+					<textcolor>ElementGray</textcolor>
+					<shadowcolor>ffffffff</shadowcolor>
+					<info>ListItem.Label</info>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<height>75</height>
+					<width>240</width>
+					<font>Symbol</font>
+					<textcolor>ElementGray</textcolor>
+					<shadowcolor>ffffffff</shadowcolor>
+					<align>center</align>
+				</control>
+				<control type="image">
+					<posx>170</posx>
+					<posy>21</posy>
+					<height>33</height>
+					<width>1</width>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout width="170" height="75">
+				<control type="image">
+					<posx>1</posx>
+					<posy>19</posy>
+					<height>40</height>
+					<width>171</width>
+					<texture background="true">home/button_h.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>21</posy>
+					<height>33</height>
+					<width>1</width>
+					<texture background="true">home/sep.png</texture>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>1</posy>
+					<height>75</height>
+					<width>240</width>
+					<info>ListItem.Label</info>
+					<font>Small</font>
+					<textcolor>ElementBlue</textcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<align>center</align>
+				</control>
+				<control type="image">
+					<posx>170</posx>
+					<posy>21</posy>
+					<height>33</height>
+					<width>1</width>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="8">
+					<description>Filme</description>
+					<label>$LOCALIZE[31042]</label>
+					<onclick>ActivateWindow(VideoLibrary,MovieTitles)</onclick>
+				</item>
+				<item id="9">
+					<description>TV-Serien</description>
+					<label>$LOCALIZE[31043]</label>
+					<onclick>ActivateWindow(VideoLibrary,videodb://tvshows/titles/)</onclick>
+				</item>
+				<item id="10">
+					<description>Dokus</description>
+					<label>$LOCALIZE[31044]</label>
+					<onclick>ActivateWindow(VideoLibrary,special://profile/playlists/video/Dokus.xsp,return)</onclick>
+				</item>
+				<item id="103">
+					<description>Fernsehen</description>
+					<label>$LOCALIZE[31045]</label>
+					<onclick>ActivateWindow(pvr)</onclick>
+				</item>
+				<item id="11">
+					<description>Music</description>
+					<label>$LOCALIZE[31046]</label>
+					<onclick>ActivateWindow(Music,musicdb://albums/)</onclick>
+				</item>
+				<item id="12">
+					<description>Pictures</description>
+					<label>$LOCALIZE[31047]</label>
+					<onclick>ActivateWindow(Pictures)</onclick>
+				</item>
+				<item id="13">
+					<description>Konzerte</description>
+					<label>$LOCALIZE[31048]</label>
+					<icon>home/sep.png</icon>
+					<onclick>ActivateWindow(Video,videodb://musicvideos/artists/)</onclick>
+					
+				</item>
+			</content>
+		</control>
+		
+		
+		
+		<control type="button" id="111114">
+			<posx>1710</posx>
+			<posy>28</posy>
+			<width>80</width>
+			<height>36</height>
+			<label>k</label>
+			<font>Symbol</font>
+			<textwidth>25</textwidth>
+			<textcolor>ElementGray</textcolor>
+			<focusedcolor>ElementBlue</focusedcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<texturefocus>none</texturefocus>
+			<texturenofocus>none</texturenofocus>
+			<onclick>Mute</onclick>
+			<onup>111114</onup>
+			<ondown>317</ondown>
+			<onleft>300</onleft>
+			<onright>14</onright>
+		</control>
+		
+		<control type="button" id="14">
+			<posx>1760</posx>
+			<posy>28</posy>
+			<width>80</width>
+			<height>36</height>
+			<label>S</label>
+			<font>Symbol</font>
+			<textwidth>25</textwidth>
+			<textcolor>ElementGray</textcolor>
+			<focusedcolor>ElementBlue</focusedcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<texturefocus>none</texturefocus>
+			<texturenofocus>none</texturenofocus>
+			<onclick>ActivateWindow(settings)</onclick>
+			<onup>14</onup>
+			<ondown>317</ondown>
+			<onleft>111114</onleft>
+			<onright>15</onright>
+		</control>
+		<control type="button" id="15">
+			<posx>1810</posx>
+			<posy>28</posy>
+			<textwidth>25</textwidth>
+			<width>80</width>
+			<height>36</height>
+			<visible>true</visible>
+			<label>g</label>
+			<font>Symbol</font>
+			<textcolor>ElementGray</textcolor>
+			<focusedcolor>ElementBlue</focusedcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<texturefocus>none</texturefocus>
+			<texturenofocus>none</texturenofocus>
+			<onclick>ActivateWindow(shutdownmenu)</onclick>
+			<onup>15</onup>
+			<ondown>317</ondown>
+			<onleft>14</onleft>
+			<onright>15</onright>
+		</control>
+		<include>Panel</include>
+		<include>RecentMoviePanel</include>
+		<include>RecentTVPanel</include>
+		<include>RecentAlbumsPanel</include>
+		<include>Dock</include>
+		<include>RecentMusicDock</include>
+		<include>RecentMovieDock</include>
+		<include>RecentTvDock</include>
+	</controls>
+</window>
