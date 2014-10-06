@@ -110,14 +110,6 @@
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="image">
-					<posx>765</posx>
-					<posy>19</posy>
-					<width>31</width>
-					<height>31</height>
-					<texture background="true">$INFO[ListItem.Overlay]</texture>
-					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
-				</control>
-				<control type="image">
 					<posx>840</posx>
 					<posy>19</posy>
 					<width>151</width>
@@ -166,14 +158,6 @@
 			
 			
 			<focusedlayout width="1700" height="70">
-				<control type="image">
-					<posx>765</posx>
-					<posy>19</posy>
-					<width>31</width>
-					<height>31</height>
-					<texture background="true">$INFO[ListItem.Overlay]</texture>
-					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
-				</control>
 				<control type="image">
 					<posx>-12</posx>
 					<posy>5</posy>
@@ -376,6 +360,14 @@
 					<width>590</width>
 					<height>870</height>
 					<texture background="true">home/case_left.png</texture>
+				</control>
+				<control type="image">
+					<posx>58</posx>
+					<posy>200</posy>
+					<width>85</width>
+					<height>55</height>
+					<texture flipx="true" background="true">$INFO[ListItem.Overlay]</texture>
+					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 				</control>
 			</control>
 		</control>
