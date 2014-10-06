@@ -5,21 +5,28 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-		<include>GlobalOverlay</include>
+		<control type="image">
+			<description>overlay</description>
+			<posx>-662</posx>
+			<posy>-492</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>other_textures/black-back.png</texture>
+		</control>
 		
 		<control type="image" id="999">
 			<description>background image</description>
 			<posx>0</posx>
-			<posy>-81</posy>
+			<posy>-281</posy>
 			<width>600</width>
 			<height>1086</height>
-			<texture border="22">other_textures/DialogContextBack.png</texture>
+			<texture border="50">other_textures/DialogContextBack.png</texture>
 		</control>
 		
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
 			<posx>45</posx>
-			<posy>0</posy>
+			<posy>-200</posy>
 			<shadowcolor>ElementGray</shadowcolor>
 			<width>510</width>
 			<height max="909">auto</height>
