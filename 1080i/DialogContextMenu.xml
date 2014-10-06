@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="106">
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<include>GlobalOverlay</include>
+		
+		<control type="image" id="999">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>-81</posy>
+			<width>600</width>
+			<height>1086</height>
+			<texture border="22">other_textures/DialogContextBack.png</texture>
+		</control>
+		
+		<control type="grouplist" id="996">
+			<description>grouplist for context buttons</description>
+			<posx>45</posx>
+			<posy>0</posy>
+			<shadowcolor>ElementGray</shadowcolor>
+			<width>510</width>
+			<height max="909">auto</height>
+			<itemgap>3</itemgap>
+			<control type="button" id="1000">
+				<description>Buttons</description>
+				<width>510</width>
+			</control>
+		</control>
+	</controls>
+</window>

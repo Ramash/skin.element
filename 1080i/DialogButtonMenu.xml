@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="buttonMenu" id="111">
+	<defaultcontrol always="true">3110</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture border="2">other_textures/black-back.png</texture>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+		</control>
+		<control type="group">
+			<posx>460</posx>
+			<posy>360</posy>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="zoom" start="50" end="100" center="960,540" time="300" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="zoom" start="100" end="150" center="960,540" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<control type="image">
+				<posx>150</posx>
+				<posy>-30</posy>
+				<width>732</width>
+				<height>346</height>
+				<texture border="10">other_textures/ContentPanel.png</texture>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<width>1034</width>
+				<posy>10</posy>
+				<font>Large</font>
+				<textcolor>99000000</textcolor>
+				<shadowcolor>ccffffff</shadowcolor>
+				<label>element</label>
+				<align>center</align>
+			</control>
+			<control type="group" id="3110">
+				<posx>230</posx>
+				<posy>145</posy>
+				<width>800</width>
+				<height>300</height>
+				<control type="button" id="3117">
+					<description>Suspend xbmc</description>
+					<onclick>XBMC.Suspend()</onclick>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>175</width>
+					<height>185</height>
+					<texturenofocus>other_textures/clock_n.png</texturenofocus>
+					<texturefocus>other_textures/clock_h.png</texturefocus>
+					<font>Small</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>Suspend</label>
+					<onleft></onleft>
+					<onright>3118</onright>
+					<onup></onup>
+					<ondown></ondown>
+				</control>
+				<control type="button" id="3118">
+					<description>Reboot button</description>
+					<posx>200</posx>
+					<posy>0</posy>
+					<width>175</width>
+					<height>185</height>
+					<onclick>XBMC.Reset()</onclick>
+					<texturenofocus>other_textures/restart_n.png</texturenofocus>
+					<texturefocus>other_textures/restart_h.png</texturefocus>
+					<font>Small</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>Reboot</label>
+					<onleft>3117</onleft>
+					<onright>3119</onright>
+					<onup></onup>
+					<ondown></ondown>
+				</control>
+				<control type="button" id="3119">
+					<description>Shutdown</description>
+					<posx>400</posx>
+					<posy>0</posy>
+					<width>175</width>
+					<height>185</height>
+					<onclick>ShutDown()</onclick>
+					<texturenofocus>other_textures/power_n.png</texturenofocus>
+					<texturefocus>other_textures/power_h.png</texturefocus>
+					<font>Small</font>
+					<textcolor>99000000</textcolor>
+					<focusedcolor>ff0055cc</focusedcolor>
+					<shadowcolor>ccffffff</shadowcolor>
+					<label>Shutdown</label>
+					<onleft>3118</onleft>
+					<onright></onright>
+					<onup></onup>
+					<ondown></ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+	<include name="Backgrounds">
+		<control type="multiimage" id="1">
+			<description>Fanart</description>
+			<include>Dimensions_Fullscreen</include>
+			<timeperimage>5000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<imagepath background="true">bgs/movies/</imagepath>
+			<visible>IsEmpty(ListItem.Art(fanart))</visible>
+			<loop>yes</loop>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">settings/bg.jpg</texture>
+			<fadetime>500</fadetime>
+			<visible>Window.IsActive(SettingsCategory.xml) | Window.IsActive(Settings.xml)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<fadetime>500</fadetime>
+			<visible>!IsEmpty(ListItem.Art(fanart))</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">$INFO[Window.Property(current.actor.fanart_image)]</texture>
+			<fadetime>500</fadetime>
+			<visible>!IsEmpty(ListItem.Art(fanart))</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">home/bgfade.png</texture>
+			<visible>Control.IsVisible(700) | Control.IsVisible(790) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(Settings.xml)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">views/whitebg.png</texture>
+			<visible>Control.IsVisible(760) | Control.IsVisible(770) | Control.IsVisible(790) | Control.IsVisible(745) | Control.IsVisible(750) | Control.IsVisible(780) | Control.IsVisible(50)</visible>
+		</control>
+	</include>
+</includes>
