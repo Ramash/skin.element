@@ -37,7 +37,7 @@
 				<focusposition>1</focusposition>
 				<preloaditems>2</preloaditems>
 				<animation effect="rotatey" center="50" start="16" end="16" time="0" condition="true">Conditional</animation>
-				<visible>!Window.IsActive(movieinformation) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(musicvideos)]</visible>				
+				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(musicvideos)</visible>				
 				
 				<itemlayout width="400" height="800">
 					<control type="group">

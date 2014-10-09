@@ -296,15 +296,6 @@
 				<animation effect="zoom" start="100" end="150" time="500" center="960,680" condition="true">Conditional</animation>
 				
 				<control type="image">
-					<posx>-765</posx>
-					<posy>-300</posy>
-					<width>1920</width>
-					<height>1080</height>
-					<animation effect="fade" start="0" end="50" delay="1000" time="500">Hidden</animation>
-					<texture background="true">other_textures/black-back.png</texture>	
-				</control>
-				
-				<control type="image">
 					<posx>0</posx>
 					<posy>600</posy>
 					<width>400</width>

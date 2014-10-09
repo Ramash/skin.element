@@ -1,3 +1,6 @@
 ﻿[B]0.0.1[/B]
 
-Initial commit
+ Initial commit
+[B]0.0.2[/B]
+
+ Added movie info screen

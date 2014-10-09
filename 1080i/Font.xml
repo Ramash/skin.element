@@ -90,6 +90,11 @@
 			<filename>econ.ttf</filename>
 			<size>18</size>
 		</font>
+		<font>
+			<name>SymbolBig</name>
+			<filename>econ.ttf</filename>
+			<size>26</size>
+		</font>
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
