@@ -198,8 +198,8 @@
 	<default type="textbox">
 		<label>-</label>
 		<font>Small</font>
-		<textcolor>white</textcolor>
-		<shadowcolor>black</shadowcolor>
+		<textcolor>White</textcolor>
+		<shadowcolor>ElementGray</shadowcolor>
 		<pagecontrol>61</pagecontrol>
 		<autoscroll delay="6000" time="3000" repeat="10000" />
 	</default>

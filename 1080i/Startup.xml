@@ -4,6 +4,5 @@
 	<onload>ReplaceWindow(Home)</onload>
 	<onload>RunScript(script.extendedinfo,backend=true)</onload>
 	<onload>RunScript(script.skin.info.service)</onload>
-	<onload condition="System.HasAddon(script.metadata.actors)">RunScript(script.metadata.actors,backend)</onload>
 </window>
 

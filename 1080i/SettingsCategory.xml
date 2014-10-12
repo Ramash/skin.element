@@ -87,8 +87,10 @@
 			<focusedcolor>ElementGray</focusedcolor>
 			<shadowcolor>ElementWhite</shadowcolor>
 			<disabledcolor>88666666</disabledcolor>
+			<invalidcolor>88666666</invalidcolor>
 			<texturefocus border="15,5,15,5">settings/topbut.png</texturefocus>
 			<texturenofocus border="15,5,15,5">settings/topbut_n.png</texturenofocus>
+			<pulseonselect>false</pulseonselect>
 		</control>
 	</controls>
 </window>
