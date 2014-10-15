@@ -14,35 +14,47 @@
 				<height>1080</height>
 				<texture>other_textures/black-back.png</texture>
 				<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
-				<visible>Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings)</visible>
+				<visible>Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videoosd)</visible>
 			</control>
+			
+			<!--control type="group">
+				<control type="image">
+					<posx>75</posx>
+					<posy>442</posy>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[Player.Folderpath,,disc.png]</texture>
+					<animation effect="rotate" center="auto" start="360" end="0" time="7000" loop="true" condition="Window.IsVisible(videoosd)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>60</posx>
+					<posy>577</posy>
+					<width>300</width>
+					<height>450</height>
+					<texture diffuse="home/case_diffuse_full.png">$INFO[Player.Art(poster)]</texture>
+				</control>
+				<control type="image">
+					<posx>54</posx>
+					<posy>571</posy>
+					<width>312</width>
+					<height>462</height>
+					<texture>home/case_full.png</texture>
+				</control>
+			</control-->
+			
 			<control type="group">
 				<visible>!Window.IsVisible(sliderdialog)</visible>
+
 				<control type="image">
-					<posx>660</posx>
-					<posy>105</posy>
-					<width>600</width>
-					<height>75</height>
-					<texture border="22,0,22,22">other_textures/DialogContextBottom.png</texture>
+					<posx>527</posx>
+					<posy>850</posy>
+					<width>866</width>
+					<height>206</height>
+					<texture border="22">other_textures/OSD/osd_panel.png</texture>
 				</control>
-				<control type="label">
-					<description>Current Control</description>
-					<posx>705</posx>
-					<posy>100</posy>
-					<width>510</width>
-					<align>center</align>
-					<label>$INFO[System.CurrentControl]</label>
-				</control>
-				<control type="image">
-					<posx>180</posx>
-					<posy>-120</posy>
-					<width>1560</width>
-					<height>240</height>
-					<texture border="22">other_textures/ContentPanel.png</texture>
-				</control>
-				<control type="grouplist" id="100">
+				<!--control type="grouplist" id="100">
 					<posx>210</posx>
-					<posy>3</posy>
+					<posy>850</posy>
 					<width>750</width>
 					<height>90</height>
 					<itemgap>3</itemgap>
@@ -83,23 +95,23 @@
 						<texturenofocus>other_textures/OSD/VideoNF.png</texturenofocus>
 						<onclick>ActivateWindow(123)</onclick>
 					</control>
-				</control>
+				</control-->
 				<control type="grouplist" id="101">
-					<posx>585</posx>
-					<posy>3</posy>
+					<posx>505</posx>
+					<posy>850</posy>
 					<width>750</width>
 					<height>120</height>
-					<itemgap>3</itemgap>
+					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<align>center</align>
 					<onleft>3</onleft>
-					<onright>4</onright>
+					<onright>453326</onright>
 					<onup>-</onup>
 					<ondown>-</ondown>
 					<control type="button" id="12">
 						<description>Skip Back</description>
-						<width>75</width>
-						<height>75</height>
+						<width>98</width>
+						<height>90</height>
 						<label>210</label>
 						<font>-</font>
 						<texturefocus>other_textures/OSD/PrevTrackFO.png</texturefocus>
@@ -108,8 +120,8 @@
 					</control>
 					<control type="button" id="13">
 						<description>Rewind</description>
-						<width>75</width>
-						<height>75</height>
+						<width>89</width>
+						<height>90</height>
 						<label>31036</label>
 						<font>-</font>
 						<texturefocus>other_textures/OSD/RewindFO.png</texturefocus>
@@ -118,8 +130,8 @@
 					</control>
 					<control type="togglebutton" id="14">
 						<description>Play/Pause</description>
-						<width>75</width>
-						<height>75</height>
+						<width>134</width>
+						<height>100</height>
 						<label>31037</label>
 						<altlabel>208</altlabel>
 						<font>-</font>
@@ -132,8 +144,8 @@
 					</control>
 					<control type="button" id="15">
 						<description>Stop</description>
-						<width>75</width>
-						<height>75</height>
+						<width>134</width>
+						<height>100</height>
 						<label>31038</label>
 						<font>-</font>
 						<texturefocus>other_textures/OSD/StopFO.png</texturefocus>
@@ -142,8 +154,8 @@
 					</control>
 					<control type="button" id="16">
 						<description>Fast Forward</description>
-						<width>75</width>
-						<height>75</height>
+						<width>90</width>
+						<height>90</height>
 						<label>31039</label>
 						<font>-</font>
 						<texturefocus>other_textures/OSD/ForwardFO.png</texturefocus>
@@ -152,8 +164,8 @@
 					</control>
 					<control type="button" id="17">
 						<description>Next</description>
-						<width>75</width>
-						<height>75</height>
+						<width>98</width>
+						<height>90</height>
 						<label>209</label>
 						<font>-</font>
 						<texturefocus>other_textures/OSD/NextTrackFO.png</texturefocus>
@@ -161,9 +173,9 @@
 						<onclick>PlayerControl(Next)</onclick>
 					</control>
 				</control>
-				<control type="grouplist" id="102">
+				<!--control type="grouplist" id="102">
 					<posx>960</posx>
-					<posy>3</posy>
+					<posy>700</posy>
 					<width>750</width>
 					<height>90</height>
 					<itemgap>3</itemgap>
@@ -208,8 +220,99 @@
 						<onclick>PlayerControl(ShowVideoMenu)</onclick>
 						<enable>VideoPlayer.HasMenu</enable>
 					</control>
-				</control>
+				</control-->
 			</control>
 		</control>
+		
+		<control type="group">
+		<posx>50%</posx>
+		<posy>50%</posy>
+			<control type="image">
+				<posx>-172</posx>
+				<posy>-260</posy>
+				<width>343</width>
+				<height>380</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>other_textures/OSD/osd_pause.png</texture>
+				<visible>Player.Paused</visible>
+				<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+			</control>
+			<control type="image">
+				<posx>-240</posx>
+				<posy>-260</posy>
+				<width>343</width>
+				<height>380</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>other_textures/OSD/osd_ff.png</texture>
+				<visible>Player.Forwarding</visible>
+				<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+			</control>
+			<control type="image">
+				<posx>-240</posx>
+				<posy>-260</posy>
+				<width>343</width>
+				<height>380</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>other_textures/OSD/osd_rw.png</texture>
+				<visible>Player.Rewinding</visible>
+				<animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+			</control>
+		</control>
+		
+		<control type="group">
+			<posx>561</posx>
+			<posy>970</posy>
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<font>Small</font>
+				<label>$INFO[Player.Time]</label>
+			</control>
+			<control type="label">
+				<posx>548</posx>
+				<posy>0</posy>
+				<font>Small</font>
+				<label>$INFO[Player.Duration]</label>
+			</control>
+			<!--control type="label">
+				<posx>500</posx>
+				<posy>84</posy>
+				<width>1680</width>
+				<align>right</align>
+				<label>$INFO[Player.Duration]</label>
+			</control-->
+			<control type="progress" id="23">
+				<description>Progress Bar</description>
+				<posx>105</posx>
+				<posy>27</posy>
+				<width>425</width>
+				<height>12</height>
+				<info>Player.Progress</info>
+				<visible>true</visible>
+			</control>
+			<control type="slider" id="401">
+				<description>Seekbar</description>
+				<posx>105</posx>
+				<posy>27</posy>
+				<width>425</width>
+				<visible>Player.Seeking</visible>
+			</control>
+		</control>
+		
+		<control type="button" id="453326">
+			<description>Advanced Options</description>
+			<posx>1270</posx>
+			<posy>925</posy>
+			<width>70</width>
+			<height>70</height>
+			<onleft>101</onleft>
+			<texturefocus>other_textures/OSD/options_h.png</texturefocus>
+			<texturenofocus>other_textures/OSD/options_n.png</texturenofocus>
+			<onclick>PlayerControl(ShowVideoMenu)</onclick>
+		</control>
+		
 	</controls>
 </window>

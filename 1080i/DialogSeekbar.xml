@@ -5,7 +5,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<visible>!Window.IsVisible(fullscreeninfo) + [VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
 	<controls>
-		<control type="group">
+		<!--control type="group">
 			<posx>105</posx>
 			<posy>930</posy>
 			<control type="image">
@@ -139,6 +139,6 @@
 				<width>1680</width>
 				<visible>Player.Seeking</visible>
 			</control>
-		</control>
+		</control-->
 	</controls>
 </window>
