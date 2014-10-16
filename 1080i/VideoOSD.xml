@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="2901">
-	<defaultcontrol always="true">14</defaultcontrol>
+	<defaultcontrol always="false">14</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
@@ -16,32 +16,7 @@
 				<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
 				<visible>Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videoosd)</visible>
 			</control>
-			
-			<!--control type="group">
-				<control type="image">
-					<posx>75</posx>
-					<posy>442</posy>
-					<width>270</width>
-					<height>270</height>
-					<texture>$INFO[Player.Folderpath,,disc.png]</texture>
-					<animation effect="rotate" center="auto" start="360" end="0" time="7000" loop="true" condition="Window.IsVisible(videoosd)">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>60</posx>
-					<posy>577</posy>
-					<width>300</width>
-					<height>450</height>
-					<texture diffuse="home/case_diffuse_full.png">$INFO[Player.Art(poster)]</texture>
-				</control>
-				<control type="image">
-					<posx>54</posx>
-					<posy>571</posy>
-					<width>312</width>
-					<height>462</height>
-					<texture>home/case_full.png</texture>
-				</control>
-			</control-->
-			
+					
 			<control type="group">
 				<visible>!Window.IsVisible(sliderdialog)</visible>
 
@@ -52,50 +27,7 @@
 					<height>206</height>
 					<texture border="22">other_textures/OSD/osd_panel.png</texture>
 				</control>
-				<!--control type="grouplist" id="100">
-					<posx>210</posx>
-					<posy>850</posy>
-					<width>750</width>
-					<height>90</height>
-					<itemgap>3</itemgap>
-					<orientation>horizontal</orientation>
-					<align>left</align>
-					<onleft>6</onleft>
-					<onright>12</onright>
-					<onup>-</onup>
-					<ondown>-</ondown>
-					<control type="button" id="1">
-						<description>Bookmarks</description>
-						<width>75</width>
-						<height>75</height>
-						<label>298</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/BookMarksFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/BookMarksNF.png</texturenofocus>
-						<onclick>ActivateWindow(125)</onclick>
-					</control>
-					<control type="button" id="2">
-						<description>Audio Settings</description>
-						<width>75</width>
-						<height>75</height>
-						<label>13396</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/AudioFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/AudioNF.png</texturenofocus>
-						<onclick>ActivateWindow(124)</onclick>
-					</control>
-					<control type="button" id="3">
-						<description>Video Settings</description>
-						<width>75</width>
-						<height>75</height>
-						<label>13395</label>
-						<align>left</align>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/VideoFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/VideoNF.png</texturenofocus>
-						<onclick>ActivateWindow(123)</onclick>
-					</control>
-				</control-->
+				
 				<control type="grouplist" id="101">
 					<posx>505</posx>
 					<posy>850</posy>
@@ -105,7 +37,7 @@
 					<orientation>horizontal</orientation>
 					<align>center</align>
 					<onleft>3</onleft>
-					<onright>453326</onright>
+					<onright>4526</onright>
 					<onup>-</onup>
 					<ondown>-</ondown>
 					<control type="button" id="12">
@@ -173,54 +105,7 @@
 						<onclick>PlayerControl(Next)</onclick>
 					</control>
 				</control>
-				<!--control type="grouplist" id="102">
-					<posx>960</posx>
-					<posy>700</posy>
-					<width>750</width>
-					<height>90</height>
-					<itemgap>3</itemgap>
-					<orientation>horizontal</orientation>
-					<align>right</align>
-					<onleft>17</onleft>
-					<onright>1</onright>
-					<onup>-</onup>
-					<ondown>-</ondown>
-					<control type="button" id="4">
-						<description>Subtitles</description>
-						<width>75</width>
-						<height>75</height>
-						<label>287</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/SubtitlesFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/SubtitlesNF.png</texturenofocus>
-						<onclick>Close</onclick>
-						<onclick>XBMC.RunScript(script.xbmc.subtitles)</onclick>
-						<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
-					</control>
-					<control type="button" id="5">
-						<description>Subtitles</description>
-						<width>75</width>
-						<height>75</height>
-						<label>287</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/SubtitlesFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/SubtitlesNF.png</texturenofocus>
-						<onclick>Close</onclick>
-						<onclick>XBMC.RunScript($INFO[Skin.String(SubtitlesPath)])</onclick>
-						<visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>
-					</control>
-					<control type="button" id="6">
-						<description>DVD menu</description>
-						<width>75</width>
-						<height>75</height>
-						<label>31041</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/DvdFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/DvdNF.png</texturenofocus>
-						<onclick>PlayerControl(ShowVideoMenu)</onclick>
-						<enable>VideoPlayer.HasMenu</enable>
-					</control>
-				</control-->
+				
 			</control>
 		</control>
 		
@@ -277,13 +162,6 @@
 				<font>Small</font>
 				<label>$INFO[Player.Duration]</label>
 			</control>
-			<!--control type="label">
-				<posx>500</posx>
-				<posy>84</posy>
-				<width>1680</width>
-				<align>right</align>
-				<label>$INFO[Player.Duration]</label>
-			</control-->
 			<control type="progress" id="23">
 				<description>Progress Bar</description>
 				<posx>105</posx>
@@ -302,7 +180,7 @@
 			</control>
 		</control>
 		
-		<control type="button" id="453326">
+		<control type="button" id="4526">
 			<description>Advanced Options</description>
 			<posx>1270</posx>
 			<posy>925</posy>
@@ -311,8 +189,112 @@
 			<onleft>101</onleft>
 			<texturefocus>other_textures/OSD/options_h.png</texturefocus>
 			<texturenofocus>other_textures/OSD/options_n.png</texturenofocus>
-			<onclick>PlayerControl(ShowVideoMenu)</onclick>
+			<onclick>Skin.ToggleSetting(options)</onclick>
+			<onclick condition="!Skin.HasSetting(options)">SetFocus(1320)</onclick>
+			<onclick condition="Skin.HasSetting(options)">SetFocus(4526)</onclick>
 		</control>
+		
+		<control type="group">
+			<visible>Skin.HasSetting(options)</visible>
+			<posy>-100</posy>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="500"/>
+				<effect type="zoom" start="50" end="100" time="500" center="960,540"/>
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="500"/>
+				<effect type="zoom" start="100" end="150" time="500" center="960,540"/>
+			</animation>
+			
+
+				<control type="image">
+					<posx>635</posx>
+					<posy>300</posy>
+					<width>650</width>
+					<height>500</height>
+					<texture border="22">home/panel.png</texture>
+				</control>
+				
+				<control type="label">
+					<posx>635</posx>
+					<posy>304</posy>
+					<width>650</width>
+					<font>SmallBold</font>
+					<align>center</align>
+					<label>.element advanced settings</label>
+				</control>
+				
+				<control type="grouplist" id="1320">
+					<posx>685</posx>
+					<posy>370</posy>
+					<width>900</width>
+					<height>700</height>
+					<itemgap>3</itemgap>
+					<orientation>vertical</orientation>
+					<onback>SetFocus(4526)</onback>
+					<onback>Skin.ToggleSetting(options)</onback>
+					
+					<control type="button" id="1123">
+						<description>Subtitles</description>
+						<width>550</width>
+						<height>75</height>
+						<label>287</label>
+						<focusedcolor>White</focusedcolor>
+						<shadowcolor>00FFFFFF</shadowcolor>
+						<onclick>XBMC.RunScript(script.xbmc.subtitles)</onclick>
+						<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
+					</control>
+					<control type="button" id="1">
+						<description>Subtitles</description>
+						<width>550</width>
+						<height>75</height>
+						<label>287</label>
+						<focusedcolor>White</focusedcolor>
+						<shadowcolor>00FFFFFF</shadowcolor>
+						<onclick>XBMC.RunScript($INFO[Skin.String(SubtitlesPath)])</onclick>
+						<visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>
+					</control>
+					<control type="button" id="2">
+						<description>DVD menu</description>
+						<width>550</width>
+						<height>75</height>
+						<label>31041</label>
+						<focusedcolor>White</focusedcolor>
+						<shadowcolor>00FFFFFF</shadowcolor>
+						<onclick>PlayerControl(ShowVideoMenu)</onclick>
+						<enable>VideoPlayer.HasMenu</enable>
+					</control>
+					<control type="button" id="3">
+						<description>Bookmarks</description>
+						<width>550</width>
+						<height>75</height>
+						<label>298</label>
+						<focusedcolor>White</focusedcolor>
+						<shadowcolor>00FFFFFF</shadowcolor>
+						<onclick>ActivateWindow(125)</onclick>
+					</control>
+					<control type="button" id="4">
+						<description>Audio Settings</description>
+						<width>550</width>
+						<height>75</height>
+						<label>13396</label>
+						<focusedcolor>White</focusedcolor>
+						<shadowcolor>00FFFFFF</shadowcolor>
+						<onclick>ActivateWindow(124)</onclick>
+					</control>
+					<control type="button" id="5">
+						<description>Video Settings</description>
+						<width>550</width>
+						<height>75</height>
+						<label>13395</label>
+						<focusedcolor>White</focusedcolor>
+						<shadowcolor>00FFFFFF</shadowcolor>
+						<onclick>Skin.ToggleSetting(options)</onclick>
+						<onclick>ActivateWindow(123)</onclick>
+						<onclick>SetFocus(4526)</onclick>
+					</control>
+				</control>
+			</control>
 		
 	</controls>
 </window>

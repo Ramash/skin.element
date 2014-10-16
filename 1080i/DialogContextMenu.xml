@@ -34,6 +34,15 @@
 			<width>510</width>
 			<height max="909">auto</height>
 			<itemgap>3</itemgap>
+			<control type="button" id="1245">
+				<description>actor/director info button (visible only container is MovieActors, MovieDirectors or TvShowActors)</description>
+				<label>[Infos] $INFO[ListItem.Label]</label>
+				<focusedcolor>White</focusedcolor>
+				<shadowcolor>00ffffff</shadowcolor>
+				<width>510</width>
+				<onclick>RunScript(script.metadata.actors,$INFO[ListItem.Label])</onclick>
+				<visible>System.HasAddon(script.metadata.actors) + [SubString(Container.FolderPath,videodb://1/4/) | SubString(Container.FolderPath,videodb://1/5/) | SubString(Container.FolderPath,videodb://2/4/)]</visible>
+			</control>
 			<control type="button" id="1000">
 				<description>Buttons</description>
 				<focusedcolor>White</focusedcolor>

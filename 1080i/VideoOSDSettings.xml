@@ -5,22 +5,32 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
-			<posx>510</posx>
-			<posy>240</posy>
+			<posx>520</posx>
+			<posy>80</posy>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+			
+			<control type="image">
+				<posx>-10</posx>
+				<posy>0</posy>
+				<width>920</width>
+				<height>660</height>
+				<texture border="22">other_textures/DialogContextBack.png</texture>
+			</control>
+			
 			<control type="label" id="2">
 				<description>Settings</description>
 				<posx>15</posx>
-				<posy>48</posy>
+				<posy>14</posy>
 				<width>870</width>
-				<font>Medium</font>
-				<shadowcolor>black</shadowcolor>
+				<font>SmallBold</font>
+				<textcolor>ElementGray</textcolor>
+				<shadowcolor>ElementWhite</shadowcolor>
 				<align>center</align>
 			</control>
 			<control type="grouplist" id="5">
 				<description>Control Area</description>
 				<posx>15</posx>
-				<posy>120</posy>
+				<posy>72</posy>
 				<width>870</width>
 				<height>552</height>
 				<itemgap>3</itemgap>
@@ -33,19 +43,40 @@
 			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>
+				<textcolor>ElementGray</textcolor>
+				<focusedcolor>ElementGray</focusedcolor>
+				<shadowcolor>ElementWhite</shadowcolor>
+				<disabledcolor>88666666</disabledcolor>
+				<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+				<texturenofocus border="15,5,15,5">none</texturenofocus>
 				<align>left</align>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
+				<textcolor>ElementGray</textcolor>
+				<focusedcolor>ElementGray</focusedcolor>
+				<shadowcolor>ElementWhite</shadowcolor>
+				<disabledcolor>88666666</disabledcolor>
+				<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+				<texturenofocus border="15,5,15,5">none</texturenofocus>
+				<radioposx>1130</radioposx>
 				<align>left</align>
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default spincontrolex</description>
+				<textcolor>ElementGray</textcolor>
+				<focusedcolor>ElementGray</focusedcolor>
+				<shadowcolor>ElementWhite</shadowcolor>
+				<disabledcolor>88666666</disabledcolor>
+				<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+				<texturenofocus border="15,5,15,5">none</texturenofocus>
 				<align>left</align>
-				<reverse>yes</reverse>
 			</control>
 			<control type="sliderex" id="10">
 				<description>Default Slider</description>
+				<font>Small</font>
+				<textcolor>ElementGray</textcolor>
+				<shadowcolor>00FFFFFF</shadowcolor>
 				<align>left</align>
 			</control>
 		</control>
