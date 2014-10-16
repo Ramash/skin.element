@@ -209,10 +209,10 @@
 
 				<control type="image">
 					<posx>635</posx>
-					<posy>300</posy>
+					<posy>280</posy>
 					<width>650</width>
-					<height>500</height>
-					<texture border="22">home/panel.png</texture>
+					<height>520</height>
+					<texture border="22">other_textures/DialogContextBack.png</texture>
 				</control>
 				
 				<control type="label">

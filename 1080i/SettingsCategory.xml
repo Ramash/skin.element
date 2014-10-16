@@ -51,6 +51,7 @@
 			<disabledcolor>88666666</disabledcolor>
 			<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
 			<texturenofocus border="15,5,15,5">none</texturenofocus>
+			<width>990</width>
 			<align>left</align>
 		</control>
 		<control type="radiobutton" id="8">
@@ -61,7 +62,7 @@
 			<disabledcolor>88666666</disabledcolor>
 			<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
 			<texturenofocus border="15,5,15,5">none</texturenofocus>
-			<radioposx>1130</radioposx>
+			<radioposx>1133</radioposx>
 			<align>left</align>
 		</control>
 		<control type="spincontrolex" id="9">
@@ -74,7 +75,7 @@
 			<texturenofocus border="15,5,15,5">none</texturenofocus>
 			<align>left</align>
 		</control>
-		<control type="button" id="10">
+		<control type="togglebutton" id="10">
 			<width>360</width>
 			<height>75</height>
 			<align>center</align>
@@ -90,7 +91,8 @@
 			<invalidcolor>88666666</invalidcolor>
 			<texturefocus border="15,5,15,5">settings/topbut.png</texturefocus>
 			<texturenofocus border="15,5,15,5">settings/topbut_n.png</texturenofocus>
-			<pulseonselect>false</pulseonselect>
+			<alttexturenofocus border="15,5,15,5">settings/topbut_n.png</alttexturenofocus>
+			<alttexturefocus border="15,5,15,5">settings/topbut.png</alttexturefocus>
 		</control>
 	</controls>
 </window>

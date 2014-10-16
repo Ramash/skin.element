@@ -5,7 +5,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
-			<posx>520</posx>
+			<posx>510</posx>
 			<posy>80</posy>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
 			
@@ -59,7 +59,13 @@
 				<disabledcolor>88666666</disabledcolor>
 				<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
 				<texturenofocus border="15,5,15,5">none</texturenofocus>
-				<radioposx>1130</radioposx>
+				<textureradioonfocus>other_textures/RadioButtonFO.png</textureradioonfocus>
+				<textureradioonnofocus>other_textures/RadioButtonFO.png</textureradioonnofocus>
+				<textureradioofffocus>other_textures/RadioButtonNF.png</textureradioofffocus>
+				<textureradiooffnofocus>other_textures/RadioButtonNF.png</textureradiooffnofocus>
+				<radiowidth>60</radiowidth>
+				<radioheight>60</radioheight>
+				<radioposx>773</radioposx>
 				<align>left</align>
 			</control>
 			<control type="spincontrolex" id="9">
@@ -74,9 +80,13 @@
 			</control>
 			<control type="sliderex" id="10">
 				<description>Default Slider</description>
-				<font>Small</font>
 				<textcolor>ElementGray</textcolor>
-				<shadowcolor>00FFFFFF</shadowcolor>
+				<focusedcolor>ElementGray</focusedcolor>
+				<shadowcolor>ElementWhite</shadowcolor>
+				<disabledcolor>88666666</disabledcolor>
+				<textoffsety>20</textoffsety>
+				<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+				<texturenofocus border="15,5,15,5">none</texturenofocus>
 				<align>left</align>
 			</control>
 		</control>
