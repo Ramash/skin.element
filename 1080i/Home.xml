@@ -249,7 +249,7 @@
 				<item id="9">
 					<description>TV-Serien</description>
 					<label>$LOCALIZE[31043]</label>
-					<onclick>ActivateWindow(VideoLibrary,videodb://tvshows/titles/)</onclick>
+					<onclick>ActivateWindow(VideoLibrary,TvShowTitles)</onclick>
 				</item>
 				<item id="10">
 					<description>Dokus</description>
@@ -350,5 +350,7 @@
 		<include>RecentMusicDock</include>
 		<include>RecentMovieDock</include>
 		<include>RecentTvDock</include>
+
+		
 	</controls>
 </window>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+	<include name="LongBanner">
+		<description>Long Banner View (id=800)</description>
+		
+		<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>300</height>
+				<texture background="true">views/sidebar.png</texture>
+				<visible>Control.IsVisible(800)</visible>
+		</control>
+		
+		<control type="group">
+			<animation effect="slide" start="0,0" end="400,0" time="500">UnFocus</animation>
+			<animation effect="slide" start="400,0" end="0,0" time="500">Focus</animation>
+			<visible>Control.IsVisible(800)</visible>
+			
+			
+			<include>Backgrounds</include>
+			<include>Navbar</include>
+		
+			
+			<control type="wraplist" id="800">
+				<posx>0</posx>
+				<posy>800</posy>
+				<width>1920</width>
+				<height>500</height>
+				<onleft>800</onleft>
+				<onright>800</onright>
+				<onup>9000</onup>
+				<ondown>60</ondown>
+				<focusposition>1</focusposition>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="Long Banner">list</viewtype>
+				<orientation>horizontal</orientation>
+				<scrolltime>500</scrolltime>
+				<preloaditems>2</preloaditems>
+				<visible>Container.Content(tvshows)</visible>				
+				
+				<itemlayout width="900" height="500">
+					<control type="image">
+						<posx>-379</posx>
+						<posy>145</posy>
+						<height>140</height>
+						<width>758</width>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture background="true" diffuse="home/banner_reflection_full.png" flipy="true">$INFO[ListItem.Art(banner)]</texture>
+					</control>
+					<control type="image">
+						<posx>-379</posx>
+						<posy>5</posy>
+						<height>140</height>
+						<width>758</width>
+						<aspectratio>stretch</aspectratio>
+						<texture diffuse="home/banner_diffuse_full.png" background="true">$INFO[ListItem.Art(banner)]</texture>
+					</control>
+					<control type="image">
+						<posx>-394</posx>
+						<posy>4</posy>
+						<width>788</width>
+						<height>143</height>
+						<texture background="true">home/case.png</texture>
+					</control>
+				</itemlayout>
+				
+				
+				<focusedlayout width="900" height="500">
+					
+					<include>BannerInfo</include>
+					
+					<control type="group">
+					<animation type="Focus">
+						<effect type="zoom" start="100" end="170" time="500" center="-80,70" />
+					</animation>
+					
+					
+					<control type="image">
+						<posx>-379</posx>
+						<posy>145</posy>
+						<height>140</height>
+						<width>758</width>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="home/banner_reflection_full.png" flipy="true">$INFO[ListItem.Art(banner)]</texture>
+					</control>
+					<control type="image">
+						<posx>-379</posx>
+						<posy>5</posy>
+						<height>140</height>
+						<width>758</width>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="home/banner_diffuse_full.png">$INFO[ListItem.Art(banner)]</texture>
+					</control>				
+					
+
+					<control type="label">
+						<posx>25</posx>
+						<posy>93</posy>
+						<font>XSmall</font>
+						<textcolor>White</textcolor>
+						<shadowcolor>ElementGray</shadowcolor>
+						<height>50</height>
+						<width>500</width>
+						<label>$INFO[ListItem.Year,[B]$LOCALIZE[31058]:[/B] ,]</label>
+					</control>
+					<control type="label">
+						<posx>450</posx>
+						<posy>93</posy>
+						<font>XSmall</font>
+						<textcolor>White</textcolor>
+						<shadowcolor>ElementGray</shadowcolor>
+						<height>50</height>
+						<width>500</width>
+						<label>[B]$LOCALIZE[31051]:[/B]</label>
+					</control>
+					<control type="image">
+						<posx>580</posx>
+						<posy>103</posy>
+						<height>32</height>
+						<width>151</width>
+						<texture background="true">stars/$INFO[ListItem.Rating].png</texture>
+					</control>
+					
+					
+					<control type="image">
+						<posx>-394</posx>
+						<posy>4</posy>
+						<width>788</width>
+						<height>143</height>
+						<texture background="true">home/case.png</texture>
+					</control>
+				</control>
+					
+				</focusedlayout>	
+			</control>
+		</control>
+	
+		<!--control type="scrollbar" id="60">
+			<posx>1317</posx>
+			<posy>51</posy>
+			<height>978</height>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
+			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
+		</control-->
+	</include>
+</includes>

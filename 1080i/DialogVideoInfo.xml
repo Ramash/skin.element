@@ -426,7 +426,7 @@
 					<height>450</height>
 					<texture background="true">$INFO[ListItem.Path,,disc.png]</texture>
 					<aspectratio align="left" aligny="top">stretch</aspectratio>
-					<animation effect="rotate" start="360" end="0" center="auto" loop="true" time="7000" condition="true" type="">Conditional</animation>	
+					<animation effect="rotate" start="360" end="0" center="auto" loop="true" time="7000" condition="true">Conditional</animation>	
 				</control>
 				
 				<control type="image" id="3">

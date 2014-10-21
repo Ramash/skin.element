@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+
 <includes>
 	<include name="Banner">
 		<description>Banner View (id=760)</description>
@@ -37,7 +37,7 @@
 				<orientation>vertical</orientation>
 				<scrolltime>500</scrolltime>
 				<preloaditems>2</preloaditems>
-				<visible>!Window.IsActive(movieinformation) + [Container.Content(episodes) | Container.Content(tvshows)]</visible>				
+				<visible>Container.Content(tvshows)</visible>				
 				
 				<itemlayout width="900" height="180">
 					<control type="image">
@@ -46,15 +46,15 @@
 						<height>140</height>
 						<width>758</width>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture background="true" diffuse="home/case_reflection.png" flipy="true">$INFO[ListItem.Art(banner)]</texture>
+						<texture background="true" diffuse="home/banner_reflection_full.png" flipy="true">$INFO[ListItem.Art(banner)]</texture>
 					</control>
 					<control type="image">
 						<posx>5</posx>
 						<posy>5</posy>
 						<height>140</height>
 						<width>758</width>
-						<aspectratio>scale</aspectratio>
-						<texture background="true">$INFO[ListItem.Art(banner)]</texture>
+						<aspectratio>stretch</aspectratio>
+						<texture diffuse="home/banner_diffuse_full.png" background="true">$INFO[ListItem.Art(banner)]</texture>
 					</control>
 					<control type="image">
 						<posx>-10</posx>
@@ -66,7 +66,7 @@
 				</itemlayout>
 				
 				
-				<focusedlayout width="900" height="200">
+				<focusedlayout width="900" height="500">
 					<control type="group">
 					<animation type="Focus">
 						<effect type="zoom" start="75" end="100" time="100" center="400,70" />

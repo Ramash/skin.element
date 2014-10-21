@@ -1,8 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window>
-	<onload>ReplaceWindow(Home)</onload>
-	<onload>RunScript(script.extendedinfo,backend=true)</onload>
-	<onload>RunScript(script.skin.info.service)</onload>
+	<defaultcontrol always="true">10</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+	<backgroundcolor>FFFFFFFF</backgroundcolor>
+	
+	<controls>
+			
+		<control type="button" id="10">
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturefocus>none</texturefocus>
+			<texturenofocus>none</texturenofocus>
+			<label></label>
+			<animation effect="fade" start="100" end="0" time="3000" delay="3000">Focus</animation>
+		</control>
+		
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">other_textures/startup_bg.png</texture>
+		</control>
+		
+		<control type="label">
+			<posx>0</posx>
+			<posy>150</posy>
+			<font>InsaneBold</font>
+			<height>150</height>
+			<width>1920</width>
+			<align>center</align>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>.element</label>
+		</control>
+		
+		<control type="label">
+			<posx>0</posx>
+			<posy>700</posy>
+			<font>MediumMedium</font>
+			<height>150</height>
+			<width>1920</width>
+			<align>center</align>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>31061</label>
+		</control>
+		
+		<control type="image">
+			<posx>808</posx>
+			<posy>395</posy>
+			<width>304</width>
+			<height>304</height>
+			<texture background="true">other_textures/startup_wheel.png</texture>
+		</control>
+	
+		<control type="image">
+			<posx>808</posx>
+			<posy>546</posy>
+			<width>149</width>
+			<height>151</height>
+			<texture background="true">other_textures/startup_nib.png</texture>
+			<animation effect="rotate" start="360" end="0" center="960,547" loop="true" time="1000" condition="true">Conditional</animation>
+		</control>
+	
+	</controls>
 </window>
 

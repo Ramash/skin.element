@@ -36,8 +36,19 @@
 			<font>Small</font>
 			<textcolor>ElementGray</textcolor>
 			<shadowcolor>ElementWhite</shadowcolor>
-			<label>Filme</label>
+			<label>$LOCALIZE[31042]</label>
 			<visible>Container.Content(movies)</visible>
+		</control>
+		<control type="label">
+			<posx>135</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>240</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>$LOCALIZE[31062]</label>
+			<visible>Window.IsActive(SettingsCategory.xml)</visible>
 		</control>
 		<control type="label">
 			<posx>115</posx>
@@ -47,29 +58,29 @@
 			<font>Small</font>
 			<textcolor>ElementGray</textcolor>
 			<shadowcolor>ElementWhite</shadowcolor>
-			<label>TV-Serien</label>
+			<label>$LOCALIZE[31043]</label>
 			<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 		</control>
 		<control type="label">
-			<posx>105</posx>
+			<posx>135</posx>
 			<posy>8</posy>
 			<height>75</height>
 			<width>240</width>
 			<font>Small</font>
 			<textcolor>ElementGray</textcolor>
 			<shadowcolor>ElementWhite</shadowcolor>
-			<label>Konzerte</label>
+			<label>$LOCALIZE[31048]</label>
 			<visible>Container.Content(musicvideos)</visible>
 		</control>
 		<control type="label">
-			<posx>105</posx>
+			<posx>135</posx>
 			<posy>8</posy>
 			<height>75</height>
 			<width>240</width>
 			<font>Small</font>
 			<textcolor>ElementGray</textcolor>
 			<shadowcolor>ElementWhite</shadowcolor>
-			<label>Musik</label>
+			<label>$LOCALIZE[31046]</label>
 			<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
 		</control>
 		<control type="image">
@@ -78,7 +89,19 @@
 			<height>38</height>
 			<width>20</width>
 			<texture>home/navsep.png</texture>
-			<visible>Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows)</visible>
+			<visible>Container.Content(seasons) | Container.Content(episodes) | Container.Content(songs) | Container.Content(movies) | Container.Content(tvshows)</visible>
+		</control>
+		<control type="label">
+			<posx>275</posx>
+			<posy>8</posy>
+			<height>75</height>
+			<width>500</width>
+			<font>Small</font>
+			<textcolor>ElementGray</textcolor>
+			<shadowcolor>ElementWhite</shadowcolor>
+			<label>$INFO[ListItem.Album]</label>
+			<align>left</align>
+			<visible>Container.Content(songs)</visible>
 		</control>
 		<control type="label">
 			<posx>275</posx>
@@ -96,11 +119,11 @@
 			<posx>275</posx>
 			<posy>8</posy>
 			<height>75</height>
-			<width>240</width>
+			<width>1040</width>
 			<font>Small</font>
 			<textcolor>ElementGray</textcolor>
 			<shadowcolor>ElementWhite</shadowcolor>
-			<label>Staffeln</label>
+			<label>$INFO[ListItem.TVShowTitle,, ]Staffeln</label>
 			<align>left</align>
 			<visible>Container.Content(seasons)</visible>
 		</control>
@@ -108,11 +131,11 @@
 			<posx>275</posx>
 			<posy>8</posy>
 			<height>75</height>
-			<width>240</width>
+			<width>1040</width>
 			<font>Small</font>
 			<textcolor>ElementGray</textcolor>
 			<shadowcolor>ElementWhite</shadowcolor>
-			<label>Episoden</label>
+			<label>$INFO[ListItem.TVShowTitle,, ]Episoden</label>
 			<align>left</align>
 			<visible>Container.Content(episodes)</visible>
 		</control>

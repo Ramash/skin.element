@@ -22,12 +22,13 @@
 			<include>Backgrounds</include>
 			<include>Navbar</include>
 			
-			<control type="list" id="790">
+			<control type="fixedlist" id="790">
 				<viewtype label="Fanart">bigwide</viewtype>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1920</width>
-				<height>1080</height>
+				<posx>80</posx>
+				<posy>650</posy>
+				<width>1790</width>
+				<height>500</height>
+				<focusposition>1</focusposition>
 				<onleft>700</onleft>
 				<onright>700</onright>
 				<onup>9000</onup>
@@ -36,62 +37,135 @@
 				<orientation>horizontal</orientation>
 				<scrolltime>500</scrolltime>
 
-				<itemlayout width="1920" height="1080"></itemlayout>
-				<focusedlayout width="1920" height="1080">
-				<control type="group">
-					<animation effect="slide" start="0,0" end="0,1000" time="500" condition="Control(790).OnNext">Conditional</animation>
-					<control type="image">
-						<posx>70</posx>
-						<posy>150</posy>
-						<width>1500</width>
-						<height>844</height>
-						<aspectratio scalediffuse="true">scale</aspectratio>
-						<texture diffuse="home/case_diffuse_left.png">$INFO[ListItem.Art(fanart)]</texture>
-					</control>
+				<itemlayout width="450" height="500">
 					
 					<control type="image">
-						<posx>70</posx>
-						<posy>860</posy>
-						<width>1513</width>
-						<height>100</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>views/listpanel.png</texture>
-					</control>
-					<control type="label">
-						<posx>785</posx>
-						<posy>760</posy>
-						<width>1500</width>
-						<height>300</height>
-						<font>LargeBold</font>
-						<textcolor>White</textcolor>
-						<shadowcolor>ElementGray</shadowcolor>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>380</width>
 						<align>center</align>
-						<label>.[LOWERCASE]$INFO[ListItem.Label][/LOWERCASE]</label>		
+						<aligny>center</aligny>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Path,,/logo.png]</texture>
 					</control>
-					
+				</itemlayout>
+				
+				<focusedlayout width="900" height="500">
 					<control type="image">
-						<posx>1570</posx>
-						<posy>141</posy>
-						<width>300</width>
-						<height>862</height>
-						<aspectratio>stretch</aspectratio>
-						<texture>views/listpanel.png</texture>
+						<posx>255</posx>
+						<posy>0</posy>
+						<width>350</width>
+						<align>center</align>
+						<aligny>center</aligny>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Path,,/logo.png]</texture>
+						<animation type="Focus">
+							<effect type="zoom" start="100" end="200" time="500" center="auto" />
+						</animation>
+						<animation type="UnFocus">
+							<effect type="slide" start="0,0" end="-255,0" time="500" />
+							<effect type="zoom" start="200" end="100" time="500" center="auto" />
+						</animation>
+
 					</control>
-					
-					
-					<control type="image">
-						<posx>40</posx>
-						<posy>138</posy>
-						<width>1560</width>
-						<height>866</height>
-						<texture>home/case_left.png</texture>
-					</control>
-					
-				</control>
 				</focusedlayout>
 				
 			</control>
-			<control type="scrollbar" id="80000">
+			<control type="group">
+				<control type="image">
+					<posx>300</posx>
+					<posy>120</posy>
+					<width>1320</width>
+					<height>600</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<aspectratio>stretch</aspectratio>
+					<texture border="22">views/bottom.png</texture>
+				</control>
+				<control type="label">
+					<posx>360</posx>
+					<posy>145</posy>
+					<label>[LOWERCASE]$INFO[ListItem.Label,.,][/LOWERCASE]</label>
+					<font>LargeBold</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>360</posx>
+					<posy>195</posy>
+					<label>$INFO[ListItem.Genre,[B]Genre[/B]: ,]</label>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>360</posx>
+					<posy>235</posy>
+					<label>$INFO[ListItem.Year,[B]Jahr[/B]: ,]</label>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+				</control>
+				
+				
+				<control type="label">
+					<posx>360</posx>
+					<posy>275</posy>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>[B]Bewertung[/B]:</label>
+				</control>
+				<control type="image">
+					<posx>500</posx>
+					<posy>292</posy>
+					<width>151</width>
+					<height>32</height>
+					<fadetime>0</fadetime>
+					<texture background="true">stars/$INFO[ListItem.Rating].png</texture>
+				</control>
+				
+				<control type="label">
+					<posx>360</posx>
+					<posy>315</posy>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>$INFO[ListItem.Property(TotalSeasons) ,[B]Staffeln[/B]: ,]$INFO[ListItem.Property(UnWatchedEpisodes) , / [B]Episoden[/B]: ,]</label>
+				</control>
+				
+				
+				<control type="image">
+					<posx>1488</posx>
+					<posy>160</posy>
+					<width>112</width>
+					<height>72</height>
+					<texture background="true">$INFO[ListItem.Overlay]</texture>
+					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>360</posx>
+					<posy>385</posy>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>[B]Plot[/B]:</label>
+				</control>
+				<control type="textbox">
+					<posx>360</posx>
+					<posy>440</posy>
+					<width>1200</width>
+					<height>240</height>
+					<label>$INFO[ListItem.Plot]</label>
+					<align>justify</align>
+					<font>XSmallSpace</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+				</control>
+			</control>
+			
+			<control type="scrollbar" id="70000">
 				<posx>0</posx>
 				<posy>1030</posy>
 				<width>1920</width>

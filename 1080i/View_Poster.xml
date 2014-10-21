@@ -85,7 +85,7 @@
 					<height>200</height>
 					<fadetime>0</fadetime>
 					<texture flipx="true">views/return.png</texture>
-					<visible>IsEmpty(ListItem.Label) + IsEmpty(ListItem.Art(thumb))</visible>
+					<visible>IsEmpty(ListItem.Title) + IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 				
 				
@@ -145,6 +145,16 @@
 			<focusedlayout width="250" height="800">
 				<include>PosterInfo</include>
 				
+				<control type="image">
+					<posx>-10</posx>
+					<posy>210</posy>
+					<width>200</width>
+					<height>200</height>
+					<fadetime>0</fadetime>
+					<texture flipx="true">views/return.png</texture>
+					<visible>IsEmpty(ListItem.Title) + IsEmpty(ListItem.Art(poster))</visible>
+				</control>
+				
 				<control type="group">
 					<animation type="Focus">
 						<effect type="zoom" delay="300" start="100" end="200" time="500" center="102,338" />
@@ -153,6 +163,7 @@
 						<effect type="zoom" delay="300" start="200" end="100" time="500" center="102,338" />
 					</animation>
 					
+				
 					
 				<control type="image">
 					<posx>0</posx>
@@ -244,15 +255,7 @@
 				</control>
 				</control>
 				
-				<control type="image">
-					<posx>-10</posx>
-					<posy>210</posy>
-					<width>200</width>
-					<height>200</height>
-					<fadetime>0</fadetime>
-					<texture flipx="true">views/return.png</texture>
-					<visible>IsEmpty(ListItem.Label) + IsEmpty(ListItem.Art(poster))</visible>
-				</control>
+				
 				
 				
 			</focusedlayout>

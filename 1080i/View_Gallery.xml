@@ -40,7 +40,16 @@
 				<preloaditems>2</preloaditems>
 				
 				
-				<itemlayout width="220" height="310">
+				<itemlayout condition="![Container.Content(albums) | Container.Content(songs)]" width="220" height="310">
+					<control type="image">
+						<posx>-15</posx>
+						<posy>40</posy>
+						<width>200</width>
+						<height>200</height>
+						<fadetime>0</fadetime>
+						<texture flipx="true">views/return.png</texture>
+						<visible>IsEmpty(ListItem.Title) + IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
 					<control type="image">
 						<posx>3</posx>
 						<posy>273</posy>
@@ -48,6 +57,7 @@
 						<width>180</width>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture background="true" diffuse="home/case_reflection_full.png" flipy="true">$INFO[ListItem.Art(thumb)]</texture>
+						<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -64,6 +74,7 @@
 						<width>180</width>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture diffuse="home/case_diffuse_full.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
 					</control>
 					<control type="image">
 						<posx>-1</posx>
@@ -71,6 +82,61 @@
 						<height>277</height>
 						<width>188</width>
 						<texture background="true">home/case_full.png</texture>
+						<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
+					<control type="image">
+						<posx>133</posx>
+						<posy>25</posy>
+						<width>56</width>
+						<height>36</height>
+						<texture background="true">$INFO[ListItem.Overlay]</texture>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+					</control>
+				</itemlayout>
+				
+				<itemlayout condition="Container.Content(albums) | Container.Content(songs)" width="270" height="290">
+					<control type="image">
+						<posx>-15</posx>
+						<posy>40</posy>
+						<width>200</width>
+						<height>200</height>
+						<fadetime>0</fadetime>
+						<texture flipx="true">views/return.png</texture>
+						<visible>IsEmpty(ListItem.Title) + IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
+					<control type="image">
+						<posx>3</posx>
+						<posy>243</posy>
+						<height>240</height>
+						<width>240</width>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="home/cd_reflection_full.png" flipy="true">$INFO[ListItem.Art(thumb)]</texture>
+						<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>197</posy>
+						<width>230</width>
+						<texture background="true">home/case_shadow.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
+					<control type="image">
+						<posx>3</posx>
+						<posy>3</posy>
+						<height>240</height>
+						<width>240</width>
+						<aspectratio>stretch</aspectratio>
+						<texture diffuse="home/cd_diffuse_full.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
+					<control type="image">
+						<posx>-1</posx>
+						<posy>-1</posy>
+						<height>247</height>
+						<width>247</width>
+						<texture background="true">home/cd_full.png</texture>
+						<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
 					</control>
 					<control type="image">
 						<posx>133</posx>
@@ -83,7 +149,16 @@
 				</itemlayout>
 				
 				
-				<focusedlayout width="250" height="330">
+				<focusedlayout condition="![Container.Content(albums) | Container.Content(songs)]" width="250" height="330">
+					<control type="image">
+						<posx>-15</posx>
+						<posy>40</posy>
+						<width>200</width>
+						<height>200</height>
+						<fadetime>0</fadetime>
+						<texture flipx="true">views/return.png</texture>
+						<visible>IsEmpty(ListItem.Title) + IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
 					<control type="group">
 					<animation type="Focus">
 						<effect type="zoom" start="75" end="100" time="200" center="100,250" />
@@ -112,6 +187,7 @@
 							<width>180</width>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<texture diffuse="home/case_diffuse_full.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
 						</control>
 						<control type="image">
 							<posx>-2</posx>
@@ -119,6 +195,7 @@
 							<width>189</width>
 							<height>275</height>
 							<texture background="true">views/gallery_select.png</texture>
+							<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
 						</control>
 						<control type="image">
 							<posx>-1</posx>
@@ -126,6 +203,7 @@
 							<height>277</height>
 							<width>188</width>
 							<texture background="true">home/case_full.png</texture>
+							<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
 						</control>
 						<control type="image">
 							<posx>133</posx>
@@ -138,6 +216,75 @@
 												
 					</control>
 				</focusedlayout>	
+			
+			<focusedlayout condition="Container.Content(albums) | Container.Content(songs)" width="270" height="290">
+					<control type="image">
+						<posx>-15</posx>
+						<posy>40</posy>
+						<width>200</width>
+						<height>200</height>
+						<fadetime>0</fadetime>
+						<texture flipx="true">views/return.png</texture>
+						<visible>IsEmpty(ListItem.Title) + IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
+					<control type="group">
+					<animation type="Focus">
+						<effect type="zoom" start="75" end="100" time="200" center="100,250" />
+					</animation>
+						<control type="image">
+							<posx>3</posx>
+							<posy>243</posy>
+							<height>240</height>
+							<width>240</width>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true" diffuse="home/cd_reflection_full.png" flipy="true">$INFO[ListItem.Art(thumb)]</texture>
+						</control>
+
+						<control type="image">
+							<posx>8</posx>
+							<posy>223</posy>
+							<width>230</width>
+							<texture background="true">home/case_shadow.png</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
+						</control>
+						<control type="image">
+							<posx>3</posx>
+							<posy>3</posy>
+							<height>240</height>
+							<width>240</width>
+							<aspectratio>stretch</aspectratio>
+							<texture diffuse="home/cd_diffuse_full.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>1</posy>
+							<width>245</width>
+							<height>245</height>
+							<texture background="true" border="5">views/gallery_select.png</texture>
+							<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
+						</control>
+						<control type="image">
+							<posx>-1</posx>
+							<posy>-1</posy>
+							<height>247</height>
+							<width>247</width>
+							<texture background="true">home/cd_full.png</texture>
+							<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Art(thumb))</visible>
+						</control>
+						<control type="image">
+							<posx>133</posx>
+							<posy>25</posy>
+							<width>56</width>
+							<height>36</height>
+							<texture background="true">$INFO[ListItem.Overlay]</texture>
+							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						</control>
+												
+					</control>
+				</focusedlayout>
+			
 			</control>
 			
 			<control type="image">

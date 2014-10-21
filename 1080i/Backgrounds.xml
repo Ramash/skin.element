@@ -33,12 +33,12 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true">home/bgfade.png</texture>
-			<visible>Control.IsVisible(700) | Control.IsVisible(790) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(Settings.xml)</visible>
+			<visible>Control.IsVisible(700) | Control.IsVisible(790) | Control.IsVisible(810) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(Settings.xml)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true">views/whitebg.png</texture>
-			<visible>Control.IsVisible(760) | Control.IsVisible(770) | Control.IsVisible(790) | Control.IsVisible(745) | Control.IsVisible(750) | Control.IsVisible(780) | Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(760) | Control.IsVisible(770) | Control.IsVisible(745) | Control.IsVisible(750) | Control.IsVisible(780) | Control.IsVisible(800) | Control.IsVisible(50)</visible>
 		</control>
 	</include>
 </includes>
