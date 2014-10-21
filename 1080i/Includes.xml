@@ -868,6 +868,7 @@
 	
 	<include name="PosterInfo">
 		<control type="group">
+				<posy>40</posy>
 				<visible>Control.IsVisible(745) + Control.HasFocus(745) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				<animation type="Focus">
 					<effect type="slide" delay="2000" start="0,-150" end="0,-241" time="700" />
@@ -883,9 +884,9 @@
 						<posx>-490</posx>
 						<posy>0</posy>
 						<width>1188</width>
-						<height>231</height>
-						<texture background="true">views/poster_info.png</texture>
-						<aspectratio>keep</aspectratio>	
+						<height>280</height>
+						<texture border="0,30,0,30" background="true">views/poster_info.png</texture>
+						<aspectratio>stretch</aspectratio>	
 					</control>
 					<control type="label">
 						<posx>-450</posx>
@@ -900,8 +901,8 @@
 					</control>
 					<control type="label">
 						<posx>-450</posx>
-						<posy>72</posy>
-						<width min="100" max="400">auto</width>
+						<posy>75</posy>
+						<width>400</width>
 						<height>50</height>
 						<font>Small</font>
 						<align>left</align>
@@ -914,7 +915,7 @@
 					</control>
 					<control type="label">
 						<posx>-447</posx>
-						<posy>110</posy>
+						<posy>130</posy>
 						<width>800</width>
 						<height>50</height>
 						<font>Small</font>
@@ -925,7 +926,7 @@
 					</control>
 					<control type="label">
 						<posx>-447</posx>
-						<posy>148</posy>
+						<posy>180</posy>
 						<width>1000</width>
 						<height>50</height>
 						<font>Small</font>
@@ -936,17 +937,18 @@
 					</control>
 					<control type="image">
 						<posx>-310</posx>
-						<posy>156</posy>
+						<posy>190</posy>
 						<width>151</width>
 						<height>32</height>
 						<texture background="true">stars/$INFO[ListItem.Rating].png</texture>
 					</control>
+
 					<control type="textbox">
 						<posx>-20</posx>
 						<posy>92</posy>
 						<width>670</width>
-						<height>90</height>
-						<font>Tiny</font>
+						<height>130</height>
+						<font>XSmallSpace</font>
 						<align>justify</align>
 						<aligny>top</aligny>
 						<textcolor>White</textcolor>

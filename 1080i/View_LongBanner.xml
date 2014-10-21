@@ -17,11 +17,9 @@
 			<animation effect="slide" start="0,0" end="400,0" time="500">UnFocus</animation>
 			<animation effect="slide" start="400,0" end="0,0" time="500">Focus</animation>
 			<visible>Control.IsVisible(800)</visible>
-			
-			
+
 			<include>Backgrounds</include>
 			<include>Navbar</include>
-		
 			
 			<control type="wraplist" id="800">
 				<posx>0</posx>
@@ -31,9 +29,9 @@
 				<onleft>800</onleft>
 				<onright>800</onright>
 				<onup>9000</onup>
-				<ondown>60</ondown>
+				<ondown>80890</ondown>
 				<focusposition>1</focusposition>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>80890</pagecontrol>
 				<viewtype label="Long Banner">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime>500</scrolltime>
@@ -58,19 +56,17 @@
 						<texture diffuse="home/banner_diffuse_full.png" background="true">$INFO[ListItem.Art(banner)]</texture>
 					</control>
 					<control type="image">
-						<posx>-394</posx>
-						<posy>4</posy>
-						<width>788</width>
-						<height>143</height>
-						<texture background="true">home/case.png</texture>
+						<posx>-388</posx>
+						<posy>-2</posy>
+						<width>776</width>
+						<height>155</height>
+						<texture background="true">home/banner_full.png</texture>
 					</control>
 				</itemlayout>
 				
 				
 				<focusedlayout width="900" height="500">
-					
-					<include>BannerInfo</include>
-					
+										
 					<control type="group">
 					<animation type="Focus">
 						<effect type="zoom" start="100" end="170" time="500" center="-80,70" />
@@ -93,51 +89,119 @@
 						<aspectratio>stretch</aspectratio>
 						<texture background="true" diffuse="home/banner_diffuse_full.png">$INFO[ListItem.Art(banner)]</texture>
 					</control>				
-					
-
-					<control type="label">
-						<posx>25</posx>
-						<posy>93</posy>
-						<font>XSmall</font>
-						<textcolor>White</textcolor>
-						<shadowcolor>ElementGray</shadowcolor>
-						<height>50</height>
-						<width>500</width>
-						<label>$INFO[ListItem.Year,[B]$LOCALIZE[31058]:[/B] ,]</label>
-					</control>
-					<control type="label">
-						<posx>450</posx>
-						<posy>93</posy>
-						<font>XSmall</font>
-						<textcolor>White</textcolor>
-						<shadowcolor>ElementGray</shadowcolor>
-						<height>50</height>
-						<width>500</width>
-						<label>[B]$LOCALIZE[31051]:[/B]</label>
-					</control>
+										
 					<control type="image">
-						<posx>580</posx>
-						<posy>103</posy>
-						<height>32</height>
-						<width>151</width>
-						<texture background="true">stars/$INFO[ListItem.Rating].png</texture>
-					</control>
-					
-					
-					<control type="image">
-						<posx>-394</posx>
-						<posy>4</posy>
-						<width>788</width>
-						<height>143</height>
-						<texture background="true">home/case.png</texture>
+						<posx>-388</posx>
+						<posy>-2</posy>
+						<width>776</width>
+						<height>155</height>
+						<texture background="true">home/banner_full.png</texture>
 					</control>
 				</control>
 					
 				</focusedlayout>	
 			</control>
 		</control>
+		
+		<control type="group">
+			<posy>-10</posy>
+			<visible>Control.IsVisible(800)</visible>
+				<control type="image">
+					<posx>300</posx>
+					<posy>120</posy>
+					<width>1320</width>
+					<height>600</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<aspectratio>stretch</aspectratio>
+					<texture border="22">views/bottom.png</texture>
+				</control>
+				<control type="label">
+					<posx>360</posx>
+					<posy>145</posy>
+					<label>[LOWERCASE]$INFO[ListItem.Label,.,][/LOWERCASE]</label>
+					<font>LargeBold</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>360</posx>
+					<posy>195</posy>
+					<label>$INFO[ListItem.Genre,[B]Genre[/B]: ,]</label>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+				</control>
+				<control type="label">
+					<posx>360</posx>
+					<posy>235</posy>
+					<label>$INFO[ListItem.Year,[B]Jahr[/B]: ,]</label>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+				</control>
+				
+				
+				<control type="label">
+					<posx>360</posx>
+					<posy>275</posy>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>[B]Bewertung[/B]:</label>
+				</control>
+				<control type="image">
+					<posx>500</posx>
+					<posy>292</posy>
+					<width>151</width>
+					<height>32</height>
+					<fadetime>0</fadetime>
+					<texture background="true">stars/$INFO[ListItem.Rating].png</texture>
+				</control>
+				
+				<control type="label">
+					<posx>360</posx>
+					<posy>315</posy>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>$INFO[ListItem.Property(TotalSeasons) ,[B]Staffeln[/B]: ,]$INFO[ListItem.Property(UnWatchedEpisodes) , / [B]Episoden[/B]: ,]</label>
+				</control>
+				
+				
+				<control type="image">
+					<posx>1488</posx>
+					<posy>160</posy>
+					<width>112</width>
+					<height>72</height>
+					<texture background="true">$INFO[ListItem.Overlay]</texture>
+					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>360</posx>
+					<posy>385</posy>
+					<font>Small</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>[B]Plot[/B]:</label>
+				</control>
+				<control type="textbox">
+					<posx>360</posx>
+					<posy>440</posy>
+					<width>1200</width>
+					<height>240</height>
+					<label>$INFO[ListItem.Plot]</label>
+					<align>justify</align>
+					<font>XSmallSpace</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+				</control>
+			</control>
+		
+		
 	
-		<!--control type="scrollbar" id="60">
+		<control type="scrollbar" id="80890">
 			<posx>1317</posx>
 			<posy>51</posy>
 			<height>978</height>
@@ -145,6 +209,6 @@
 			<onright>9000</onright>
 			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
 			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
-		</control-->
+		</control>
 	</include>
 </includes>

@@ -28,6 +28,7 @@
 				<posy>120</posy>
 				<width>1760</width>
 				<height>900</height>
+				<preloaditems>20</preloaditems>
 				<onleft>810</onleft>
 				<onright>810</onright>
 				<onup>9000</onup>
@@ -57,10 +58,23 @@
 						<aspectratio>stretch</aspectratio>
 						<texture background="true">home/cd_full.png</texture>
 					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>280</width>
+						<height>280</height>
+						<align>center</align>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="home/cd_diffuse_full.png">home/bgfade.png</texture>
+						<animation condition="true" type="Conditional">
+							<effect type="fade" start="50" end="50" time="0" />
+						</animation>
+					</control>
 				</itemlayout>
 					
 				
 				<focusedlayout width="294" height="300">
+				
 					<control type="group">
 						<animation type="Focus">
 							<effect type="zoom" start="100" end="140" time="500" center="auto" />
@@ -88,6 +102,21 @@
 							<aligny>center</aligny>
 							<aspectratio>stretch</aspectratio>
 							<texture background="true">home/cd_full.png</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>280</width>
+							<height>280</height>
+							<align>center</align>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true" diffuse="home/cd_diffuse_full.png">home/bgfade.png</texture>
+							<animation type="Focus">
+								<effect type="fade" start="50" end="0" time="500" />
+							</animation>
+							<animation type="UnFocus">
+								<effect type="fade" start="0" end="50" time="500" />
+							</animation>
 						</control>
 					</control>
 				</focusedlayout>

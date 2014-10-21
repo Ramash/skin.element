@@ -139,27 +139,30 @@
 			<align>left</align>
 			<visible>Container.Content(episodes)</visible>
 		</control>
-		<control type="label">
-			<posx>1835</posx>
-			<posy>7</posy>
-			<height>75</height>
-			<width>240</width>
-			<font>Small</font>
-			<textcolor>ElementGray</textcolor>
-			<shadowcolor>ElementWhite</shadowcolor>
-			<label>$INFO[System.Time]</label>
-			<align>right</align>
-		</control>
-		<control type="label">
-			<posx>1870</posx>
-			<posy>8</posy>
-			<height>75</height>
-			<width>40</width>
-			<font>Symbol</font>
-			<textcolor>ElementGray</textcolor>
-			<shadowcolor>ElementWhite</shadowcolor>
-			<label>j</label>
-			<align>right</align>
+		<control type="group">
+			<visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+			<control type="label">
+				<posx>1835</posx>
+				<posy>7</posy>
+				<height>75</height>
+				<width>240</width>
+				<font>Small</font>
+				<textcolor>ElementGray</textcolor>
+				<shadowcolor>ElementWhite</shadowcolor>
+				<label>$INFO[System.Time]</label>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<posx>1870</posx>
+				<posy>8</posy>
+				<height>75</height>
+				<width>40</width>
+				<font>Symbol</font>
+				<textcolor>ElementGray</textcolor>
+				<shadowcolor>ElementWhite</shadowcolor>
+				<label>j</label>
+				<align>right</align>
+			</control>
 		</control>
 	</include>
 </includes>

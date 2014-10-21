@@ -25,7 +25,7 @@
 		<control type="fixedlist" id="745">
 			<viewtype label="Poster">bigwide</viewtype>
 			<posx>0</posx>
-			<posy>350</posy>
+			<posy>305</posy>
 			<width>1920</width>
 			<height>900</height>
 			<onleft>745</onleft>
@@ -41,7 +41,7 @@
 			<itemlayout width="250" height="800">
 				<control type="image">
 					<posx>0</posx>
-					<posy>471</posy>
+					<posy>571</posy>
 					<width>200</width>
 					<height>300</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>	
@@ -50,7 +50,7 @@
 				</control>
 				<control type="image">
 					<posx>5</posx>
-					<posy>143</posy>
+					<posy>243</posy>
 					<width>190</width>
 					<fadetime>0</fadetime>
 					<texture background="true">home/case_shadow.png</texture>
@@ -60,7 +60,7 @@
 				
 				<control type="image">
 					<posx>0</posx>
-					<posy>170</posy>
+					<posy>270</posy>
 					<width>200</width>
 					<height>300</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>	
@@ -70,7 +70,7 @@
 				
 				<control type="image">
 					<posx>0</posx>
-					<posy>170</posy>
+					<posy>270</posy>
 					<width>200</width>
 					<height>300</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>	
@@ -80,7 +80,7 @@
 				
 				<control type="image">
 					<posx>-10</posx>
-					<posy>210</posy>
+					<posy>310</posy>
 					<width>200</width>
 					<height>200</height>
 					<fadetime>0</fadetime>
@@ -93,7 +93,7 @@
 					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)]</visible>
 					<control type="image" id="87000">
 						<posx>0</posx>
-						<posy>471</posy>
+						<posy>571</posy>
 						<width>200</width>
 						<height>300</height>
 						<aspectratio>stretch</aspectratio>
@@ -101,7 +101,7 @@
 					</control>
 					<control type="image" id="87001">
 						<posx>0</posx>
-						<posy>171</posy>
+						<posy>271</posy>
 						<width>200</width>
 						<height>300</height>
 						<aspectratio>stretch</aspectratio>
@@ -109,7 +109,7 @@
 					</control>
 					<control type="label">
 						<posx>100</posx>
-						<posy>290</posy>
+						<posy>390</posy>
 						<width>300</width>
 						<align>center</align>
 						<font>SmallBold</font>
@@ -123,7 +123,7 @@
 								
 				<control type="image">
 					<posx>-5</posx>
-					<posy>166</posy>
+					<posy>266</posy>
 					<width>209</width>
 					<height>308</height>
 					<fadetime>0</fadetime>
@@ -132,7 +132,7 @@
 				</control>
 				<control type="image">
 					<posx>150</posx>
-					<posy>185</posy>
+					<posy>285</posy>
 					<width>56</width>
 					<height>36</height>
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
@@ -143,11 +143,12 @@
 			
 			
 			<focusedlayout width="250" height="800">
+						
 				<include>PosterInfo</include>
 				
 				<control type="image">
 					<posx>-10</posx>
-					<posy>210</posy>
+					<posy>310</posy>
 					<width>200</width>
 					<height>200</height>
 					<fadetime>0</fadetime>
@@ -157,17 +158,17 @@
 				
 				<control type="group">
 					<animation type="Focus">
-						<effect type="zoom" delay="300" start="100" end="200" time="500" center="102,338" />
+						<effect type="zoom" delay="300" start="100" end="200" time="500" center="102,438" />
 					</animation>
 					<animation type="UnFocus">
-						<effect type="zoom" delay="300" start="200" end="100" time="500" center="102,338" />
+						<effect type="zoom" delay="300" start="200" end="100" time="500" center="102,438" />
 					</animation>
 					
 				
 					
 				<control type="image">
 					<posx>0</posx>
-					<posy>471</posy>
+					<posy>571</posy>
 					<width>200</width>
 					<height>300</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>	
@@ -176,7 +177,7 @@
 				</control>
 				<control type="image">
 					<posx>5</posx>
-					<posy>143</posy>
+					<posy>243</posy>
 					<width>190</width>
 					<fadetime>0</fadetime>
 					<texture background="true">home/case_shadow.png</texture>
@@ -186,7 +187,7 @@
 				
 				<control type="image">
 					<posx>0</posx>
-					<posy>170</posy>
+					<posy>270</posy>
 					<width>200</width>
 					<height>300</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>	
@@ -196,7 +197,7 @@
 				
 				<control type="image">
 					<posx>0</posx>
-					<posy>170</posy>
+					<posy>270</posy>
 					<width>200</width>
 					<height>300</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>	
@@ -208,7 +209,7 @@
 					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)]</visible>
 					<control type="image" id="87000">
 						<posx>0</posx>
-						<posy>471</posy>
+						<posy>571</posy>
 						<width>200</width>
 						<height>300</height>
 						<aspectratio>stretch</aspectratio>
@@ -216,7 +217,7 @@
 					</control>
 					<control type="image" id="87001">
 						<posx>0</posx>
-						<posy>171</posy>
+						<posy>271</posy>
 						<width>200</width>
 						<height>300</height>
 						<aspectratio>stretch</aspectratio>
@@ -224,7 +225,7 @@
 					</control>
 					<control type="label">
 						<posx>100</posx>
-						<posy>290</posy>
+						<posy>390</posy>
 						<width>300</width>
 						<align>center</align>
 						<font>SmallBold</font>
@@ -238,7 +239,7 @@
 								
 				<control type="image">
 					<posx>-5</posx>
-					<posy>166</posy>
+					<posy>266</posy>
 					<width>209</width>
 					<height>308</height>
 					<fadetime>0</fadetime>
@@ -247,7 +248,7 @@
 				</control>
 				<control type="image">
 					<posx>150</posx>
-					<posy>185</posy>
+					<posy>285</posy>
 					<width>56</width>
 					<height>36</height>
 					<texture background="true">$INFO[ListItem.Overlay]</texture>
