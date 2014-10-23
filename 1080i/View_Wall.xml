@@ -32,8 +32,8 @@
 				<onleft>810</onleft>
 				<onright>810</onright>
 				<onup>9000</onup>
-				<ondown>70000</ondown>
-				<pagecontrol>70000</pagecontrol>
+				<ondown>70012</ondown>
+				<pagecontrol>70012</pagecontrol>
 				<orientation>horizontal</orientation>
 				<scrolltime>500</scrolltime>
 
@@ -65,10 +65,7 @@
 						<height>280</height>
 						<align>center</align>
 						<aspectratio>stretch</aspectratio>
-						<texture background="true" diffuse="home/cd_diffuse_full.png">home/bgfade.png</texture>
-						<animation condition="true" type="Conditional">
-							<effect type="fade" start="50" end="50" time="0" />
-						</animation>
+						<texture background="true" diffuse="home/cd_diffuse_full.png">home/bgfade50.png</texture>
 					</control>
 				</itemlayout>
 					
@@ -82,6 +79,26 @@
 						<animation type="UnFocus">
 							<effect type="zoom" start="140" end="100" time="500" center="auto" />
 						</animation>
+						
+						
+						
+						<control type="image">
+							<posx>0</posx>
+							<posy>15</posy>
+							<width>250</width>
+							<height>250</height>
+							<align>center</align>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Artist,//QNAP-XC42/Musik,]$INFO[ListItem.Year,/[,]]$INFO[ListItem.Album, ,/cdart.png]</texture>
+							<animation type="Focus">
+								<effect type="slide" delay="1500" start="0,0" end="155,0" time="500" />
+								<effect type="rotate" start="360" end="0" center="auto" loop="true" time="7000" />
+							</animation>
+							<animation type="UnFocus">
+								<effect type="fade" start="100" end="0" time="200" />
+							</animation>
+						</control>
+						
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -110,12 +127,12 @@
 							<height>280</height>
 							<align>center</align>
 							<aspectratio>stretch</aspectratio>
-							<texture background="true" diffuse="home/cd_diffuse_full.png">home/bgfade.png</texture>
+							<texture background="true" diffuse="home/cd_diffuse_full.png">home/bgfade50.png</texture>
 							<animation type="Focus">
-								<effect type="fade" start="50" end="0" time="500" />
+								<effect type="fade" start="100" end="0" time="500" />
 							</animation>
 							<animation type="UnFocus">
-								<effect type="fade" start="0" end="50" time="500" />
+								<effect type="fade" start="0" end="100" time="500" />
 							</animation>
 						</control>
 					</control>
@@ -124,21 +141,38 @@
 			</control>
 			
 			
-			<control type="scrollbar" id="70000">
-				<posx>0</posx>
-				<posy>1030</posy>
-				<width>1920</width>
-				<onleft>70000</onleft>
-				<onright>70000</onright>
-				<onup>700</onup>
-				<ondown>700</ondown>
+			<control type="scrollbar" id="70012">
+				<posx>23</posx>
+				<posy>1049</posy>
+				<width>1874</width>
+				<height>31</height>
+				<onleft>70012</onleft>
+				<onright>70012</onright>
+				<onup>810</onup>
+				<ondown>810</ondown>
 				<orientation>horizontal</orientation>
-				<texturesliderbackground>views/scrollbg.png</texturesliderbackground>
-				<textureslidernib>views/scrollnib.png</textureslidernib>
-				<textureslidernibfocus>views/scrollnib.png</textureslidernibfocus>
+				<texturesliderbackground>other_textures/ScrollBarBg.png</texturesliderbackground>
+				<textureslidernib>other_textures/ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>other_textures/ScrollBarNib.png</textureslidernibfocus>
 				<texturesliderbar>none</texturesliderbar>
 				<texturesliderbarfocus>none</texturesliderbarfocus>
-				<visible allowhiddenfocus="true">Control.HasFocus(70000)</visible>
+				<visible allowhiddenfocus="true">Control.HasFocus(70012)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>1049</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture>other_textures/ScrollbarSide.png</texture>
+				<visible>Control.HasFocus(70012)</visible>
+			</control>
+			<control type="image">
+				<posx>1897</posx>
+				<posy>1049</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture flipx="true">other_textures/ScrollbarSide.png</texture>
+				<visible>Control.HasFocus(70012)</visible>
 			</control>
 		</control>
 	</include>

@@ -29,9 +29,9 @@
 				<onleft>770</onleft>
 				<onright>770</onright>
 				<onup>9000</onup>
-				<ondown>60</ondown>
-				<pagecontrol>60</pagecontrol>
-				<viewtype label="Thumbs">list</viewtype>
+				<ondown>70064</ondown>
+				<pagecontrol>70064</pagecontrol>
+				<viewtype label="Shelf">list</viewtype>
 				<orientation>horizontal</orientation>
 				<scrolltime>500</scrolltime>
 				<focusposition>1</focusposition>
@@ -295,29 +295,45 @@
 						<texture background="true" fallback="flags/other/fallback.png">flags/audio/$INFO[ListItem.AudioCodec].png</texture>
 						<visible>![ListItem.IsFolder + !stringcompare(ListItem.Label,..) + SubString(Container.Folderpath,videodb://,left)]</visible>
 					</control>
-
-				
-				
-				
-				
-				
-				
-				
-				
-
-				
+			
+			</control>
+			
+			<control type="scrollbar" id="70064">
+				<posx>23</posx>
+				<posy>1049</posy>
+				<width>1874</width>
+				<height>31</height>
+				<onleft>70064</onleft>
+				<onright>70064</onright>
+				<onup>770</onup>
+				<ondown>770</ondown>
+				<orientation>horizontal</orientation>
+				<texturesliderbackground>other_textures/ScrollBarBg.png</texturesliderbackground>
+				<textureslidernib>other_textures/ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>other_textures/ScrollBarNib.png</textureslidernibfocus>
+				<texturesliderbar>none</texturesliderbar>
+				<texturesliderbarfocus>none</texturesliderbarfocus>
+				<visible allowhiddenfocus="true">Control.HasFocus(70064)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>1049</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture>other_textures/ScrollbarSide.png</texture>
+				<visible>Control.HasFocus(70064)</visible>
+			</control>
+			<control type="image">
+				<posx>1897</posx>
+				<posy>1049</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture flipx="true">other_textures/ScrollbarSide.png</texture>
+				<visible>Control.HasFocus(70064)</visible>
 			</control>
 			
 		</control>
 	
-		<!--control type="scrollbar" id="60">
-			<posx>1317</posx>
-			<posy>51</posy>
-			<height>978</height>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
-			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
-		</control-->
+		
 	</include>
 </includes>

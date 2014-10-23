@@ -23,17 +23,17 @@
 			<include>Navbar</include>
 			
 			<control type="fixedlist" id="790">
-				<viewtype label="Fanart">bigwide</viewtype>
+				<viewtype label="Logo">bigwide</viewtype>
 				<posx>80</posx>
 				<posy>650</posy>
 				<width>1790</width>
 				<height>500</height>
 				<focusposition>1</focusposition>
-				<onleft>700</onleft>
-				<onright>700</onright>
+				<onleft>790</onleft>
+				<onright>790</onright>
 				<onup>9000</onup>
-				<ondown>70000</ondown>
-				<pagecontrol>70000</pagecontrol>
+				<ondown>70008</ondown>
+				<pagecontrol>70008</pagecontrol>
 				<orientation>horizontal</orientation>
 				<scrolltime>500</scrolltime>
 
@@ -165,21 +165,38 @@
 				</control>
 			</control>
 			
-			<control type="scrollbar" id="70000">
-				<posx>0</posx>
-				<posy>1030</posy>
-				<width>1920</width>
-				<onleft>70000</onleft>
-				<onright>70000</onright>
-				<onup>700</onup>
-				<ondown>700</ondown>
+			<control type="scrollbar" id="70008">
+				<posx>23</posx>
+				<posy>1049</posy>
+				<width>1874</width>
+				<height>31</height>
+				<onleft>70008</onleft>
+				<onright>70008</onright>
+				<onup>790</onup>
+				<ondown>790</ondown>
 				<orientation>horizontal</orientation>
-				<texturesliderbackground>views/scrollbg.png</texturesliderbackground>
-				<textureslidernib>views/scrollnib.png</textureslidernib>
-				<textureslidernibfocus>views/scrollnib.png</textureslidernibfocus>
+				<texturesliderbackground>other_textures/ScrollBarBg.png</texturesliderbackground>
+				<textureslidernib>other_textures/ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>other_textures/ScrollBarNib.png</textureslidernibfocus>
 				<texturesliderbar>none</texturesliderbar>
 				<texturesliderbarfocus>none</texturesliderbarfocus>
-				<visible allowhiddenfocus="true">Control.HasFocus(70000)</visible>
+				<visible allowhiddenfocus="true">Control.HasFocus(70008)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>1049</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture>other_textures/ScrollbarSide.png</texture>
+				<visible>Control.HasFocus(70008)</visible>
+			</control>
+			<control type="image">
+				<posx>1897</posx>
+				<posy>1049</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture flipx="true">other_textures/ScrollbarSide.png</texture>
+				<visible>Control.HasFocus(70008)</visible>
 			</control>
 		</control>
 	</include>

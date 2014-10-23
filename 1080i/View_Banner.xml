@@ -29,10 +29,10 @@
 				<width>1800</width>
 				<height>900</height>
 				<onleft>9000</onleft>
-				<onright>60</onright>
+				<onright>70920</onright>
 				<onup>760</onup>
 				<ondown>760</ondown>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>70920</pagecontrol>
 				<viewtype label="Banner">list</viewtype>
 				<orientation>vertical</orientation>
 				<scrolltime>500</scrolltime>
@@ -152,16 +152,42 @@
 					
 				</focusedlayout>	
 			</control>
+			
+			<control type="scrollbar" id="70920">
+				<posx>1889</posx>
+				<posy>142</posy>
+				<width>31</width>
+				<height>916</height>
+				<onleft>760</onleft>
+				<onright>70920</onright>
+				<onup>70920</onup>
+				<ondown>70920</ondown>
+				<orientation>vertical</orientation>
+				<texturesliderbackground>other_textures/ScrollBarV.png</texturesliderbackground>
+				<textureslidernib>other_textures/ScrollBarV_bar_focus.png</textureslidernib>
+				<textureslidernibfocus>other_textures/ScrollBarV_bar_focus.png</textureslidernibfocus>
+				<texturesliderbar>none</texturesliderbar>
+				<texturesliderbarfocus>none</texturesliderbarfocus>
+				<visible allowhiddenfocus="true">Control.HasFocus(70920)</visible>
+			</control>
+			<control type="image">
+				<posx>1897</posx>
+				<posy>1049</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture>other_textures/ScrollbarBottom.png</texture>
+				<visible>Control.HasFocus(70920)</visible>
+			</control>
+			<control type="image">
+				<posx>1897</posx>
+				<posy>120</posy>
+				<width>23</width>
+				<height>31</height>
+				<texture flipy="true">other_textures/ScrollbarBottom.png</texture>
+				<visible>Control.HasFocus(70920)</visible>
+			</control>
+			
 		</control>
-	
-		<!--control type="scrollbar" id="60">
-			<posx>1317</posx>
-			<posy>51</posy>
-			<height>978</height>
-			<onleft>50</onleft>
-			<onright>9000</onright>
-			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
-			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
-		</control-->
+
 	</include>
 </includes>
