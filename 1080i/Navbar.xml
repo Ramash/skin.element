@@ -7,7 +7,6 @@
 			<posy>15</posy>
 			<width>1890</width>
 			<height>60</height>
-			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture>home/navbar.png</texture>
 		</control>
 		<control type="label">
@@ -48,7 +47,7 @@
 			<textcolor>ElementGray</textcolor>
 			<shadowcolor>ElementWhite</shadowcolor>
 			<label>$LOCALIZE[31062]</label>
-			<visible>Window.IsActive(SettingsCategory.xml)</visible>
+			<visible>Window.IsActive(SettingsCategory.xml) | Window.IsActive(CustomSettings.xml) | Window.IsActive(Settings.xml)</visible>
 		</control>
 		<control type="label">
 			<posx>115</posx>

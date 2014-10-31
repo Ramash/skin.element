@@ -64,4 +64,25 @@
   <string id="31060">Update Library</string>
   <string id="31061">Loading...</string>
   <string id="31062">Settings</string>
+  <string id="31063">.element Settings</string>
+  <string id="31064">Custom Playlist</string>
+  <string id="31065">Music Addon</string>
+  <string id="31066">Video Addon</string>
+  <string id="31067">Change</string>
+  <string id="31068">Label</string>
+  <string id="31069">Shortcut</string>
+  <string id="31070">Backgrounds</string>
+  <string id="31071">Home Menu</string>
+  <string id="31072">Background Options</string>
+  <string id="32000">The display settings allow the selection of skins and their customization. In addition, settings such as language, region, file lists and screen saver can be adjusted here.</string>
+  <string id="32001">The video settings of Kodi include all options of the video library and playback.[CR]Customize your system to achieve the best image quality.[CR] Also, it is possible to choose the color and position of subtitles here.</string>
+  <string id="32002">The music options include all settings for the audio library and music playback.[CR]Customize your system to achieve the best audio quality.[CR] In addition, options regarding audio CDs and karaoke can be adjusted.</string >
+   <string id="32003">Here you can download, install and adjust the settings of add-ons for the Kodi system.</string>
+   <string id="32004">The image options allow settings such as the use of EXIF image information, the creation of thumbnails or advanced adjustments for slideshow playback.</string>
+   <string id="32005">Here settings for the weather forecast can be made. Core functions include the selection of a plugin for the weather forecast as well as the setting of the location.</string>
+   <string id="32006">Network settings, the device name, UPnP / web server and the remote access to Kodi can be controlled in the network settings. Other options include the configuration of Zeroconf and AirPlay.</string>
+   <string id="32007">The system settings offer numerous options for configuring the basic system functions, such as video and audio hardware. In addition, input devices, Internet access and energy saving functions can be configured.</string>
+   <string id="32008">The profile menu can be used to create additional users. This allows the realization of an accurate media access control on user base.</string>
+   <string id="32009">The system info displays information about the current hardware status (memory, network, graphics card, processor utilization, etc.).</string>
+   <string id="32010"> Detailed settings for .element.[CR]Here options including zoom & pan for fanart, start menu shortcuts and similar settings can be adjusted.</string>
 </strings>

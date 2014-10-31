@@ -52,6 +52,19 @@
 			<scrolltime>300</scrolltime>
 			<preloaditems>2</preloaditems>
 			
+			<itemlayout condition="![Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(songs)]" width="1700" height="70">
+				<control type="label">
+					<posx>110</posx>
+					<posy>0</posy>
+					<width>600</width>
+					<height>70</height>
+					<font>Medium</font>
+					<textcolor>ElementWhite</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>.[LOWERCASE]$INFO[ListItem.Label][/LOWERCASE]</label>
+				</control>
+			</itemlayout>
+			
 			<itemlayout condition="Container.Content(tvshows)" width="1700" height="70">
 				<control type="label">
 					<posx>110</posx>
@@ -364,6 +377,30 @@
 					<shadowcolor>ElementGray</shadowcolor>
 					<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[31059]</label>
 					<visible>Control.IsVisible(50) + Container.Content(tvshows)</visible>
+				</control>
+			</focusedlayout>
+
+			<focusedlayout condition="![Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(songs)]" width="1700" height="70">
+				<control type="image">
+					<posx>76</posx>
+					<posy>0</posy>
+					<width>1180</width>
+					<height>74</height>
+					<aspectratio>stretch</aspectratio>
+					<texture border="15" background="true">other_textures/ButtonFO_half.png</texture>
+					<animation effect="slide" tween="circle" start="0,-70" end="0,0" time="300" condition="Container(50).OnNext">Focus</animation>
+					<animation effect="slide" tween="circle" start="0,70" end="0,0" time="300" condition="Container(50).OnPrevious">Focus</animation>
+				</control>
+				
+				<control type="label">
+					<posx>110</posx>
+					<posy>0</posy>
+					<width>600</width>
+					<height>70</height>
+					<font>Medium</font>
+					<textcolor>ElementWhite</textcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<label>.[LOWERCASE]$INFO[ListItem.Label][/LOWERCASE]</label>
 				</control>
 			</focusedlayout>			
 		</control>

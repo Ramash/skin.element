@@ -3,61 +3,37 @@
 <window id="0">
 	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<onload condition="!Skin.String(Home1)">Skin.SetString(Home1,$LOCALIZE[31042])</onload>
+	<onload condition="!Skin.String(Home2)">Skin.SetString(Home2,$LOCALIZE[31043])</onload>
+	<onload condition="!Skin.String(Home3)">Skin.SetString(Home3,$LOCALIZE[31044])</onload>
+	<onload condition="!Skin.String(Home4)">Skin.SetString(Home4,$LOCALIZE[31045])</onload>
+	<onload condition="!Skin.String(Home5)">Skin.SetString(Home5,$LOCALIZE[31046])</onload>
+	<onload condition="!Skin.String(Home6)">Skin.SetString(Home6,$LOCALIZE[31047])</onload>
+	<onload condition="!Skin.String(Home7)">Skin.SetString(Home7,$LOCALIZE[31048])</onload>
+	
+	<onload condition="!Skin.String(Home1Path)">Skin.SetString(Home1Path,ActivateWindow(VideoLibrary,MovieTitles))</onload>
+	<onload condition="!Skin.String(Home2Path)">Skin.SetString(Home2Path,ActivateWindow(VideoLibrary,TvShowTitles))</onload>
+	<onload condition="!Skin.String(Home3Path)">Skin.SetString(Home3Path,ActivateWindow(VideoLibrary,special://profile/playlists/video/Dokus.xsp,return))</onload>
+	<onload condition="!Skin.String(Home4Path)">Skin.SetString(Home5Path,ActivateWindow(pvr)</onload>
+	<onload condition="!Skin.String(Home5Path)">Skin.SetString(Home5Path,ActivateWindow(Music,musicdb://albums/))</onload>
+	<onload condition="!Skin.String(Home6Path)">Skin.SetString(Home6Path,ActivateWindow(Pictures))</onload>
+	<onload condition="!Skin.String(Home7Path)">Skin.SetString(Home7Path,ActivateWindow(Video,videodb://musicvideos/artists/))</onload>
+	
+	
+	<onload condition="!Skin.String(Home1Back)">Skin.SetString(Home1Back,bgs/movies/)</onload>
+	<onload condition="!Skin.String(Home2Back)">Skin.SetString(Home2Back,bgs/tv/)</onload>
+	<onload condition="!Skin.String(Home3Back)">Skin.SetString(Home3Back,bgs/dokus/)</onload>
+	<onload condition="!Skin.String(Home4Back)">Skin.SetString(Home4Back,bgs/livetv/)</onload>
+	<onload condition="!Skin.String(Home5Back)">Skin.SetString(Home5Back,bgs/music/)</onload>
+	<onload condition="!Skin.String(Home6Back)">Skin.SetString(Home6Back,bgs/photos/)</onload>
+	<onload condition="!Skin.String(Home7Back)">Skin.SetString(Home7Back,bgs/concerts/)</onload>
+	
+	
+		
+		
 	<controls>
 		<include>GlobalBackground</include>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<fadetime>500</fadetime>
-			<texture background="true">$INFO[Container(317).ListItem.Art(fanart)]</texture>
-			<visible>Control.HasFocus(317) + !IsEmpty(Container(317).ListItem.Art(fanart))</visible>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<fadetime>500</fadetime>
-			<texture background="true">$INFO[Container(318).ListItem.Art(fanart)]</texture>
-			<visible>Control.HasFocus(318) + !IsEmpty(Container(318).ListItem.Art(fanart))</visible>
-		</control>
-		
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<fadetime>500</fadetime>
-			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.1.Fanart)]</texture>
-			<visible>Control.HasFocus(319) + Container(319).Position(0) + !IsEmpty(Window(Home).Property(LatestAlbum.1.Fanart))</visible>
-			<animation effect="fade" time="500">VisibleChange</animation>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<fadetime>500</fadetime>
-			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.2.Fanart)]</texture>
-			<visible>Control.HasFocus(319) + Container(319).Position(1) + !IsEmpty[Window(Home).Property(LatestAlbum.2.Fanart)]</visible>
-			<animation effect="fade" time="500">VisibleChange</animation>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<fadetime>500</fadetime>
-			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.3.Fanart)]</texture>
-			<visible>Control.HasFocus(319) + Container(319).Position(2) + !IsEmpty[Window(Home).Property(LatestAlbum.3.Fanart)]</visible>
-			<animation effect="fade" time="500">VisibleChange</animation>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<fadetime>500</fadetime>
-			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.4.Fanart)]</texture>
-			<visible>Control.HasFocus(319) + Container(319).Position(3) + !IsEmpty[Window(Home).Property(LatestAlbum.4.Fanart)]</visible>
-			<animation effect="fade" time="500">VisibleChange</animation>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<fadetime>500</fadetime>
-			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.5.Fanart)]</texture>
-			<visible>Control.HasFocus(319) + Container(319).Position(4) + !IsEmpty[Window(Home).Property(LatestAlbum.5.Fanart)]</visible>
-			<animation effect="fade" time="500">VisibleChange</animation>
-		</control>
-
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture background="true">home/bgfade.png</texture>
-		</control>
+		<include>Backgrounds</include>
 		
 		<control type="group">
 			<visible>Control.HasFocus(111114)</visible>
@@ -134,7 +110,47 @@
 			</control>
 		</control>
 		
-		
+		<control type="label">
+			<posx>0</posx>
+			<posy>0</posy>
+			<font>MegaBold</font>
+			<height>1000</height>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>ElementWhite</textcolor>
+			<shadowcolor>ElementGray</shadowcolor>
+			<label>[UPPERCASE]$INFO[Container(300).ListItem.Label][/UPPERCASE]</label>
+			<visible>Skin.HasSetting(MenuCaptions)</visible>
+			<animation reversible="false" condition="Container(300).Position(0)" type="Conditional">
+				<effect type="fade" delay="500" start="0" end="100" time="500" />
+				<effect type="fade" delay="3500" start="100" end="0" time="500" />
+			</animation>
+			<animation reversible="false" condition="Container(300).Position(1)" type="Conditional">
+				<effect type="fade" delay="500" start="0" end="100" time="500" />
+				<effect type="fade" delay="3500" start="100" end="0" time="500" />
+			</animation>
+			<animation reversible="false" condition="Container(300).Position(2)" type="Conditional">
+				<effect type="fade" delay="500" start="0" end="100" time="500" />
+				<effect type="fade" delay="3500" start="100" end="0" time="500" />
+			</animation>
+			<animation reversible="false" condition="Container(300).Position(3)" type="Conditional">
+				<effect type="fade" delay="500" start="0" end="100" time="500" />
+				<effect type="fade" delay="3500" start="100" end="0" time="500" />
+			</animation>
+			<animation reversible="false" condition="Container(300).Position(4)" type="Conditional">
+				<effect type="fade" delay="500" start="0" end="100" time="500" />
+				<effect type="fade" delay="3500" start="100" end="0" time="500" />
+			</animation>
+			<animation reversible="false" condition="Container(300).Position(5)" type="Conditional">
+				<effect type="fade" delay="500" start="0" end="100" time="500" />
+				<effect type="fade" delay="3500" start="100" end="0" time="500" />
+			</animation>
+			<animation reversible="false" condition="Container(300).Position(6)" type="Conditional">
+				<effect type="fade" delay="500" start="0" end="100" time="500" />
+				<effect type="fade" delay="3500" start="100" end="0" time="500" />
+			</animation>
+		</control>
 		
 		<control type="image" id="2">
 			<description>Navbar</description>
@@ -142,7 +158,6 @@
 			<posy>15</posy>
 			<width>1890</width>
 			<height>60</height>
-			<colordiffuse>FFFFFFFF</colordiffuse>
 			<texture background="true">home/navbar.png</texture>
 		</control>
 		<control type="label">
@@ -185,7 +200,7 @@
 					<width>240</width>
 					<font>Small</font>
 					<textcolor>ElementGray</textcolor>
-					<shadowcolor>ffffffff</shadowcolor>
+					<shadowcolor>White</shadowcolor>
 					<info>ListItem.Label</info>
 					<align>center</align>
 				</control>
@@ -195,7 +210,7 @@
 					<width>240</width>
 					<font>Symbol</font>
 					<textcolor>ElementGray</textcolor>
-					<shadowcolor>ffffffff</shadowcolor>
+					<shadowcolor>White</shadowcolor>
 					<align>center</align>
 				</control>
 				<control type="image">
@@ -243,45 +258,43 @@
 			<content>
 				<item id="8">
 					<description>Filme</description>
-					<label>$LOCALIZE[31042]</label>
-					<onclick>ActivateWindow(VideoLibrary,MovieTitles)</onclick>
+					<label>$INFO[Skin.String(Home1)]</label>
+					<onclick>$INFO[Skin.String(Home1Path)]</onclick>
 				</item>
 				<item id="9">
 					<description>TV-Serien</description>
-					<label>$LOCALIZE[31043]</label>
-					<onclick>ActivateWindow(VideoLibrary,TvShowTitles)</onclick>
+					<label>$INFO[Skin.String(Home2)]</label>
+					<onclick>$INFO[Skin.String(Home2Path)]</onclick>
 				</item>
 				<item id="10">
 					<description>Dokus</description>
-					<label>$LOCALIZE[31044]</label>
-					<onclick>ActivateWindow(VideoLibrary,special://profile/playlists/video/Dokus.xsp,return)</onclick>
+					<label>$INFO[Skin.String(Home3)]</label>
+					<onclick>$INFO[Skin.String(Home3Path)]</onclick>
 				</item>
 				<item id="103">
 					<description>Fernsehen</description>
-					<label>$LOCALIZE[31045]</label>
-					<onclick>ActivateWindow(pvr)</onclick>
+					<label>$INFO[Skin.String(Home4)]</label>
+					<onclick>$INFO[Skin.String(Home4Path)]</onclick>
 				</item>
 				<item id="11">
 					<description>Music</description>
-					<label>$LOCALIZE[31046]</label>
-					<onclick>ActivateWindow(Music,musicdb://albums/)</onclick>
+					<label>$INFO[Skin.String(Home5)]</label>
+					<onclick>$INFO[Skin.String(Home5Path)]</onclick>
 				</item>
 				<item id="12">
 					<description>Pictures</description>
-					<label>$LOCALIZE[31047]</label>
-					<onclick>ActivateWindow(Pictures)</onclick>
+					<label>$INFO[Skin.String(Home6)]</label>
+					<onclick>$INFO[Skin.String(Home6Path)]</onclick>
 				</item>
 				<item id="13">
 					<description>Konzerte</description>
-					<label>$LOCALIZE[31048]</label>
+					<label>$INFO[Skin.String(Home7)]</label>
 					<icon>home/sep.png</icon>
-					<onclick>ActivateWindow(Video,videodb://musicvideos/artists/)</onclick>
+					<onclick>$INFO[Skin.String(Home7Path)]</onclick>
 					
 				</item>
 			</content>
 		</control>
-		
-		
 		
 		<control type="button" id="111114">
 			<posx>1710</posx>

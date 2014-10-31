@@ -2,21 +2,25 @@
 
 <includes>
 	<include name="Backgrounds">
-		<control type="multiimage" id="1">
+	<control type="group">
+		<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedBackground)">Conditional</animation>
+        <animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedBackground)">Conditional</animation>
+		
+		<control type="multiimage">
 			<description>Fanart</description>
 			<include>Dimensions_Fullscreen</include>
 			<timeperimage>5000</timeperimage>
 			<fadetime>1500</fadetime>
 			<randomize>true</randomize>
 			<imagepath background="true">bgs/movies/</imagepath>
-			<visible>IsEmpty(ListItem.Art(fanart))</visible>
+			<visible>IsEmpty(ListItem.Art(fanart)) + !Window.IsActive(Home.xml)</visible>
 			<loop>yes</loop>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true">settings/bg.jpg</texture>
 			<fadetime>500</fadetime>
-			<visible>Window.IsActive(SettingsCategory.xml) | Window.IsActive(Settings.xml)</visible>
+			<visible>Window.IsActive(SettingsCategory.xml) | Window.IsActive(CustomSettings.xml) | Window.IsActive(Settings.xml)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -32,13 +36,179 @@
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
+			<texture background="true">settings/bg.jpg</texture>
+			<visible>Window.IsActive(Settings.xml) | Window.IsActive(SettingsCategory.xml)</visible>
+		</control>
+		<control type="multiimage">
+			<description>Fanart</description>
+			<include>Dimensions_Fullscreen</include>
+			<timeperimage>5000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<imagepath background="true">$INFO[Skin.String(Home1Back)]</imagepath>
+			<visible>Container(300).HasFocus(8)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="0" start="0" end="100" time="500" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" delay="250" start="100" end="0" time="500" />
+			</animation>
+			<loop>yes</loop>
+		</control>
+		<control type="multiimage">
+			<description>Fanart</description>
+			<include>Dimensions_Fullscreen</include>
+			<timeperimage>5000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<imagepath background="true">$INFO[Skin.String(Home2Back)]</imagepath>
+			<visible>Container(300).HasFocus(9)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="0" start="0" end="100" time="500" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" delay="250" start="100" end="0" time="500" />
+			</animation>
+			<loop>yes</loop>
+		</control>
+		<control type="multiimage">
+			<description>Fanart</description>
+			<include>Dimensions_Fullscreen</include>
+			<timeperimage>5000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<imagepath background="true">$INFO[Skin.String(Home3Back)]</imagepath>
+			<visible>Container(300).HasFocus(10)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="0" start="0" end="100" time="500" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" delay="250" start="100" end="0" time="500" />
+			</animation>
+			<loop>yes</loop>
+		</control>
+		<control type="multiimage">
+			<description>Fanart</description>
+			<include>Dimensions_Fullscreen</include>
+			<timeperimage>5000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<imagepath background="true">$INFO[Skin.String(Home4Back)]</imagepath>
+			<visible>Container(300).HasFocus(103)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="0" start="0" end="100" time="500" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" delay="250" start="100" end="0" time="500" />
+			</animation>
+			<loop>yes</loop>
+		</control>
+		<control type="multiimage">
+			<description>Fanart</description>
+			<include>Dimensions_Fullscreen</include>
+			<timeperimage>5000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<imagepath background="true">$INFO[Skin.String(Home5Back)]</imagepath>
+			<visible>Container(300).HasFocus(11)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="0" start="0" end="100" time="500" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" delay="250" start="100" end="0" time="500" />
+			</animation>
+			<loop>yes</loop>
+		</control>
+		<control type="multiimage">
+			<description>Fanart</description>
+			<include>Dimensions_Fullscreen</include>
+			<timeperimage>5000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<imagepath background="true">$INFO[Skin.String(Home6Back)]</imagepath>
+			<visible>Container(300).HasFocus(12)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="0" start="0" end="100" time="500" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" delay="250" start="100" end="0" time="500" />
+			</animation>
+			<loop>yes</loop>
+		</control>
+		<control type="multiimage">
+			<description>Fanart</description>
+			<include>Dimensions_Fullscreen</include>
+			<timeperimage>5000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<imagepath background="true">$INFO[Skin.String(Home7Back)]</imagepath>
+			<visible>Container(300).HasFocus(13)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="0" start="0" end="100" time="500" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" delay="250" start="100" end="0" time="500" />
+			</animation>
+			<loop>yes</loop>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Container(317).ListItem.Art(fanart)]</texture>
+			<visible>Control.HasFocus(317) + !IsEmpty(Container(317).ListItem.Art(fanart))</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Container(318).ListItem.Art(fanart)]</texture>
+			<visible>Control.HasFocus(318) + !IsEmpty(Container(318).ListItem.Art(fanart))</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.1.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(0) + !IsEmpty(Window(Home).Property(LatestAlbum.1.Fanart))</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.2.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(1) + !IsEmpty[Window(Home).Property(LatestAlbum.2.Fanart)]</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.3.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(2) + !IsEmpty[Window(Home).Property(LatestAlbum.3.Fanart)]</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.4.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(3) + !IsEmpty[Window(Home).Property(LatestAlbum.4.Fanart)]</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>500</fadetime>
+			<texture background="true">$INFO[Window(Home).Property(LatestAlbum.5.Fanart)]</texture>
+			<visible>Control.HasFocus(319) + Container(319).Position(4) + !IsEmpty[Window(Home).Property(LatestAlbum.5.Fanart)]</visible>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
 			<texture background="true">home/bgfade.png</texture>
-			<visible>Control.IsVisible(700) | Control.IsVisible(790) | Control.IsVisible(810) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(Settings.xml)</visible>
+			<visible>Control.IsVisible(700) | Control.IsVisible(790) | Control.IsVisible(810) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(CustomSettings.xml) | Window.IsActive(Settings.xml) | Window.IsActive(Home.xml)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true">views/whitebg.png</texture>
 			<visible>Control.IsVisible(760) | Control.IsVisible(770) | Control.IsVisible(745) | Control.IsVisible(750) | Control.IsVisible(780) | Control.IsVisible(800) | Control.IsVisible(50)</visible>
 		</control>
+		
+	</control>
 	</include>
 </includes>

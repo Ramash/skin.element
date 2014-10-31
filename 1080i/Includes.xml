@@ -104,7 +104,7 @@
 			</control>
 			<control type="image">
 				<description>rating</description>
-				<posx>505</posx>
+				<posx>510</posx>
 				<posy>331</posy>
 				<width>151</width>
 				<height>32</height>
@@ -245,7 +245,7 @@
 			</control>
 			<control type="image">
 				<description>rating</description>
-				<posx>505</posx>
+				<posx>510</posx>
 				<posy>331</posy>
 				<width>151</width>
 				<height>32</height>
@@ -737,118 +737,7 @@
 	</include>
 	
 	<include name="GlobalBackground">
-		<control type="multiimage" id="1">
-			<description>Fanart</description>
-			<include>Dimensions_Fullscreen</include>
-			<timeperimage>5000</timeperimage>
-			<fadetime>1500</fadetime>
-			<randomize>true</randomize>
-			<imagepath background="true">bgs/movies/</imagepath>
-			<visible>Container(300).HasFocus(8)</visible>
-			<animation type="Visible">
-				<effect type="fade" delay="0" start="0" end="100" time="500" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" delay="250" start="100" end="0" time="500" />
-			</animation>
-			<loop>yes</loop>
-		</control>
-		<control type="multiimage" id="11">
-			<description>Fanart</description>
-			<include>Dimensions_Fullscreen</include>
-			<timeperimage>5000</timeperimage>
-			<fadetime>1500</fadetime>
-			<randomize>true</randomize>
-			<imagepath background="true">bgs/tv/</imagepath>
-			<visible>Container(300).HasFocus(9)</visible>
-			<animation type="Visible">
-				<effect type="fade" delay="0" start="0" end="100" time="500" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" delay="250" start="100" end="0" time="500" />
-			</animation>
-			<loop>yes</loop>
-		</control>
-		<control type="multiimage" id="111">
-			<description>Fanart</description>
-			<include>Dimensions_Fullscreen</include>
-			<timeperimage>5000</timeperimage>
-			<fadetime>1500</fadetime>
-			<randomize>true</randomize>
-			<imagepath background="true">bgs/dokus/</imagepath>
-			<visible>Container(300).HasFocus(10)</visible>
-			<animation type="Visible">
-				<effect type="fade" delay="0" start="0" end="100" time="500" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" delay="250" start="100" end="0" time="500" />
-			</animation>
-			<loop>yes</loop>
-		</control>
-		<control type="multiimage" id="1113">
-			<description>Fanart</description>
-			<include>Dimensions_Fullscreen</include>
-			<timeperimage>5000</timeperimage>
-			<fadetime>1500</fadetime>
-			<randomize>true</randomize>
-			<imagepath background="true">bgs/livetv/</imagepath>
-			<visible>Container(300).HasFocus(103)</visible>
-			<animation type="Visible">
-				<effect type="fade" delay="0" start="0" end="100" time="500" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" delay="250" start="100" end="0" time="500" />
-			</animation>
-			<loop>yes</loop>
-		</control>
-		<control type="multiimage" id="1111">
-			<description>Fanart</description>
-			<include>Dimensions_Fullscreen</include>
-			<timeperimage>5000</timeperimage>
-			<fadetime>1500</fadetime>
-			<randomize>true</randomize>
-			<imagepath background="true">bgs/music/</imagepath>
-			<visible>Container(300).HasFocus(11)</visible>
-			<animation type="Visible">
-				<effect type="fade" delay="0" start="0" end="100" time="500" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" delay="250" start="100" end="0" time="500" />
-			</animation>
-			<loop>yes</loop>
-		</control>
-		<control type="multiimage" id="11111">
-			<description>Fanart</description>
-			<include>Dimensions_Fullscreen</include>
-			<timeperimage>5000</timeperimage>
-			<fadetime>1500</fadetime>
-			<randomize>true</randomize>
-			<imagepath background="true">bgs/photos/</imagepath>
-			<visible>Container(300).HasFocus(12)</visible>
-			<animation type="Visible">
-				<effect type="fade" delay="0" start="0" end="100" time="500" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" delay="250" start="100" end="0" time="500" />
-			</animation>
-			<loop>yes</loop>
-		</control>
-		<control type="multiimage" id="111111">
-			<description>Fanart</description>
-			<include>Dimensions_Fullscreen</include>
-			<timeperimage>5000</timeperimage>
-			<fadetime>1500</fadetime>
-			<randomize>true</randomize>
-			<imagepath background="true">bgs/concerts/</imagepath>
-			<visible>Container(300).HasFocus(13)</visible>
-			<animation type="Visible">
-				<effect type="fade" delay="0" start="0" end="100" time="500" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" delay="250" start="100" end="0" time="500" />
-			</animation>
-			<loop>yes</loop>
-		</control>
+		
 		<control type="group">
 			<visible>[Player.HasAudio + !Skin.HasSetting(NoBackgroundVisualiser)] | [Player.HasVideo + !Skin.HasSetting(NoBackgroundVideo)]</visible>
 			<control type="visualisation">

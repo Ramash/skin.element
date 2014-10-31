@@ -243,8 +243,9 @@
 				<shadowcolor>ElementGray</shadowcolor>
 				<width>350</width>
 				<align>left</align>
-				<label>24069</label>
-				<onclick>UpdateLibrary(video)</onclick>
+				<label>653</label>
+				<altlabel>13353</altlabel>
+				<usealttexture>library.isscanningvideo</usealttexture>
 			</control>
 		</control>
 	</controls>

@@ -4,107 +4,201 @@
 	<defaultcontrol always="true">100</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<include>GlobalBackground</include>
+		<include>Backgrounds</include>
+		
+		<control type="image">
+			<posx>285</posx>
+			<posy>180</posy>
+			<width>1320</width>
+			<height>790</height>
+			<texture border="50" background="true">views/panel.png</texture>
+		</control>
+		
 		<control type="list" id="100">
-			<description>List</description>
-			<posx>15</posx>
-			<posy>210</posy>
-			<width>450</width>
-			<height>720</height>
+			<description>Button Area</description>
+			<posx>55</posx>
+			<posy>65</posy>
+			<width>1810</width>
+			<height>75</height>
+			<itemgap>2</itemgap>
+			<onleft>100</onleft>
+			<onright>100</onright>
 			<onup>100</onup>
-			<ondown>100</ondown>
-			<onleft>-</onleft>
-			<onright>99</onright>
-			<scrolltime>0</scrolltime>
-			<orientation>vertical</orientation>
-			<pagecontrol>-</pagecontrol>
-			<itemlayout height="69" width="450">
+			<ondown condition="Container(100).Position(0)">8800</ondown>
+			<ondown condition="Container(100).Position(1)">300</ondown>
+			<orientation>horizontal</orientation>
+			<itemlayout height="75" width="360">
 				<control type="image">
-					<width>450</width>
-					<height>66</height>
-					<texture border="2">other_textures/ButtonNF.png</texture>
+					<width>360</width>
+					<height>75</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<texture border="15,5,15,5">settings/topbut_n.png</texture>
 				</control>
 				<control type="label">
-					<posx>30</posx>
-					<width>390</width>
+					<posx>180</posx>
+					<width>360</width>
+					<height>50</height>
+					<font>SmallBold</font>
+					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
-				</control>
+					<textcolor>ElementGray</textcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+				</control>	
 			</itemlayout>
-			<focusedlayout height="69" width="450">
+			
+			<focusedlayout height="75" width="360">
 				<control type="image">
-					<width>450</width>
-					<height>66</height>
-					<texture border="5">other_textures/ButtonFO.png</texture>
-					<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(100)">Conditional</animation>
+					<width>360</width>
+					<height>75</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<texture border="15,5,15,5">settings/topbut.png</texture>
 				</control>
 				<control type="label">
-					<posx>30</posx>
-					<width>390</width>
+					<posx>180</posx>
+					<width>360</width>
+					<height>50</height>
+					<font>SmallBold</font>
+					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
+					<textcolor>ElementGray</textcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
 				</control>
 			</focusedlayout>
 			<content>
 				<item id="1">
-					<description>Background Visuals</description>
-					<label>31016</label>
+					<description>Home Menu</description>
+					<label>31071</label>
 					<onclick>-</onclick>
 				</item>
 				<item id="2">
-					<description>Lyrics/Subtitles</description>
-					<label>31017</label>
-					<onclick>-</onclick>
-				</item>
-				<item id="3">
-					<description>Debug</description>
-					<label>31033</label>
+					<description>Misc Settings</description>
+					<label>31072</label>
 					<onclick>-</onclick>
 				</item>
 			</content>
 		</control>
+		<include>Navbar</include>
+		
 		<control type="group" id="99">
-			<posx>510</posx>
-			<posy>210</posy>
-			<control type="grouplist" id="200">
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			
+			<control type="grouplist" id="300">
 				<description>Control Area</description>
+				<posx>330</posx>
+				<posy>250</posy>
 				<width>1230</width>
-				<height>720</height>
+				<height>685</height>
 				<itemgap>3</itemgap>
-				<onup>200</onup>
-				<ondown>200</ondown>
-				<onleft>100</onleft>
-				<onright>-</onright>
+				<onleft>300</onleft>
+				<onright>300</onright>
+				<onup>100</onup>
+				<ondown>300</ondown>
 				<orientation>vertical</orientation>
-				<visible>Container(100).Hasfocus(1)</visible>
+				<visible>Container(100).Hasfocus(2)</visible>
 				<control type="radiobutton" id="201">
 					<description>Background Visualiser</description>
-					<width>1230</width>
+					<textcolor>ElementGray</textcolor>
+					<focusedcolor>ElementGray</focusedcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<disabledcolor>88666666</disabledcolor>
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+					<texturenofocus border="15,5,15,5">none</texturenofocus>
+					<radioposx>1133</radioposx>
 					<align>left</align>
+					<width>1230</width>
 					<label>31023</label>
 					<onclick>Skin.ToggleSetting(NoBackgroundVisualiser)</onclick>
 					<selected>Skin.HasSetting(NoBackgroundVisualiser)</selected>
 				</control>
+				
 				<control type="radiobutton" id="202">
 					<description>Background Video</description>
-					<width>1230</width>
+					<textcolor>ElementGray</textcolor>
+					<focusedcolor>ElementGray</focusedcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<disabledcolor>88666666</disabledcolor>
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+					<texturenofocus border="15,5,15,5">none</texturenofocus>
+					<radioposx>1133</radioposx>
 					<align>left</align>
+					<width>1230</width>
 					<label>31024</label>
 					<onclick>Skin.ToggleSetting(NoBackgroundVideo)</onclick>
 					<selected>Skin.HasSetting(NoBackgroundVideo)</selected>
 				</control>
-			</control>
-			<control type="grouplist" id="300">
-				<description>Control Area</description>
-				<width>1230</width>
-				<height>720</height>
-				<itemgap>3</itemgap>
-				<onup>200</onup>
-				<ondown>200</ondown>
-				<onleft>100</onleft>
-				<onright>-</onright>
-				<orientation>vertical</orientation>
-				<visible>Container(100).Hasfocus(2)</visible>
+				
+				<control type="radiobutton" id="203">
+					<description>Background Video</description>
+					<textcolor>ElementGray</textcolor>
+					<focusedcolor>ElementGray</focusedcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<disabledcolor>88666666</disabledcolor>
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+					<texturenofocus border="15,5,15,5">none</texturenofocus>
+					<radioposx>1133</radioposx>
+					<align>left</align>
+					<width>1230</width>
+					<label>Animate Background (Pan & Zoom)</label>
+					<onclick>Skin.ToggleSetting(AnimatedBackground)</onclick>
+					<selected>Skin.HasSetting(AnimatedBackground)</selected>
+				</control>
+				<control type="radiobutton" id="501">
+					<description>Enable Debug Grid</description>
+					<textcolor>ElementGray</textcolor>
+					<focusedcolor>ElementGray</focusedcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<disabledcolor>88666666</disabledcolor>
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+					<texturenofocus border="15,5,15,5">none</texturenofocus>
+					<radioposx>1133</radioposx>
+					<align>left</align>
+					<width>1230</width>
+					<label>Enable Debug Grid</label>
+					<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
+					<selected>Skin.HasSetting(DebugGrid)</selected>
+				</control>
+				<control type="radiobutton" id="502">
+					<description>Enable Debug Info</description>
+					<textcolor>ElementGray</textcolor>
+					<focusedcolor>ElementGray</focusedcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<disabledcolor>88666666</disabledcolor>
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+					<texturenofocus border="15,5,15,5">none</texturenofocus>
+					<radioposx>1133</radioposx>
+					<align>left</align>
+					<width>1230</width>
+					<label>Enable Debug Info</label>
+					<onclick>Skin.ToggleSetting(HideDebugInfo)</onclick>
+					<selected>!Skin.HasSetting(HideDebugInfo)</selected>
+				</control>
+				<control type="radiobutton" id="503">
+					<description>Enable Menu Captions</description>
+					<textcolor>ElementGray</textcolor>
+					<focusedcolor>ElementGray</focusedcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<disabledcolor>88666666</disabledcolor>
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+					<texturenofocus border="15,5,15,5">none</texturenofocus>
+					<radioposx>1133</radioposx>
+					<align>left</align>
+					<width>1230</width>
+					<label>Enable Smart Home Labels</label>
+					<onclick>Skin.ToggleSetting(MenuCaptions)</onclick>
+					<selected>Skin.HasSetting(MenuCaptions)</selected>
+				</control>
 				<control type="button" id="301">
 					<description>Default Button</description>
+					<textcolor>ElementGray</textcolor>
+					<focusedcolor>ElementGray</focusedcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<disabledcolor>88666666</disabledcolor>
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+					<texturenofocus border="15,5,15,5">none</texturenofocus>
 					<width>1230</width>
 					<align>left</align>
 					<label>31025</label>
@@ -112,16 +206,23 @@
 				</control>
 				<control type="button" id="302">
 					<description>Default Button</description>
+					<focusedcolor>ElementGray</focusedcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<disabledcolor>88666666</disabledcolor>
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+					<texturenofocus border="15,5,15,5">none</texturenofocus>
 					<width>1230</width>
 					<align>left</align>
+
 					<label>31026</label>
 					<onclick>Skin.SetAddon(SubtitlePath,xbmc.python.subtitles)</onclick>
 				</control>
 			</control>
+			
 			<control type="grouplist" id="400">
 				<description>Control Area</description>
-				<width>1230</width>
-				<height>720</height>
+				<posx>330</posx>
+				<posy>665</posy>
 				<itemgap>3</itemgap>
 				<onup>200</onup>
 				<ondown>200</ondown>
@@ -158,34 +259,504 @@
 					<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
 				</control>
 			</control>
-			<control type="grouplist" id="500">
-				<description>Control Area</description>
-				<width>1230</width>
-				<height>720</height>
-				<itemgap>3</itemgap>
-				<onup>500</onup>
-				<ondown>500</ondown>
-				<onleft>100</onleft>
-				<onright>-</onright>
-				<orientation>vertical</orientation>
-				<visible>Container(100).Hasfocus(3)</visible>
-				<control type="radiobutton" id="501">
-					<description>Enable Debug Grid</description>
-					<width>1230</width>
-					<align>left</align>
-					<label>31034</label>
-					<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
-					<selected>Skin.HasSetting(DebugGrid)</selected>
+			
+			<control type="group">
+				<visible>Container(100).Hasfocus(1)</visible>
+				<posy>0</posy>
+				<!--0.60-->
+				<control type="multiimage">
+					<posx>370</posx>
+					<posy>260</posy>
+					<width>1152</width>
+					<height>648</height>
+					<timeperimage>5000</timeperimage>
+					<fadetime>1500</fadetime>
+					<randomize>true</randomize>
+					<imagepath background="true">$INFO[Skin.String(Home1Back)]</imagepath>
+					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+					<visible>Container(8800).Position(0)</visible>
 				</control>
-				<control type="radiobutton" id="502">
-					<description>Disable Debug Info</description>
-					<width>1230</width>
-					<align>left</align>
-					<label>31035</label>
-					<onclick>Skin.ToggleSetting(HideDebugInfo)</onclick>
-					<selected>Skin.HasSetting(HideDebugInfo)</selected>
+				<control type="multiimage">
+					<posx>370</posx>
+					<posy>260</posy>
+					<width>1152</width>
+					<height>648</height>
+					<timeperimage>5000</timeperimage>
+					<fadetime>1500</fadetime>
+					<randomize>true</randomize>
+					<imagepath background="true">$INFO[Skin.String(Home2Back)]</imagepath>
+					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+					<visible>Container(8800).Position(1)</visible>
+				</control>
+				<control type="multiimage">
+					<posx>370</posx>
+					<posy>260</posy>
+					<width>1152</width>
+					<height>648</height>
+					<timeperimage>5000</timeperimage>
+					<fadetime>1500</fadetime>
+					<randomize>true</randomize>
+					<imagepath background="true">$INFO[Skin.String(Home3Back)]</imagepath>
+					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+					<visible>Container(8800).Position(2)</visible>
+				</control>
+				<control type="multiimage">
+					<posx>370</posx>
+					<posy>260</posy>
+					<width>1152</width>
+					<height>648</height>
+					<timeperimage>5000</timeperimage>
+					<fadetime>1500</fadetime>
+					<randomize>true</randomize>
+					<imagepath background="true">$INFO[Skin.String(Home4Back)]</imagepath>
+					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+					<visible>Container(8800).Position(3)</visible>
+				</control>
+				<control type="multiimage">
+					<posx>370</posx>
+					<posy>260</posy>
+					<width>1152</width>
+					<height>648</height>
+					<timeperimage>5000</timeperimage>
+					<fadetime>1500</fadetime>
+					<randomize>true</randomize>
+					<imagepath background="true">$INFO[Skin.String(Home5Back)]</imagepath>
+					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+					<visible>Container(8800).Position(4)</visible>
+				</control>
+				<control type="multiimage">
+					<posx>370</posx>
+					<posy>260</posy>
+					<width>1152</width>
+					<height>648</height>
+					<timeperimage>5000</timeperimage>
+					<fadetime>1500</fadetime>
+					<randomize>true</randomize>
+					<imagepath background="true">$INFO[Skin.String(Home6Back)]</imagepath>
+					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+					<visible>Container(8800).Position(5)</visible>
+				</control>
+				<control type="multiimage">
+					<posx>370</posx>
+					<posy>260</posy>
+					<width>1152</width>
+					<height>648</height>
+					<timeperimage>5000</timeperimage>
+					<fadetime>1500</fadetime>
+					<randomize>true</randomize>
+					<imagepath background="true">$INFO[Skin.String(Home7Back)]</imagepath>
+					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+					<visible>Container(8800).Position(6)</visible>
+				</control>
+				
+				
+				<control type="group">
+					<posx>383</posx>
+					<posy>270</posy>
+					<control type="image">
+						<posx>0</posx>
+						<posy>10</posy>
+						<width>1126</width>
+						<height>60</height>
+						<texture border="10" background="true">home/navbar.png</texture>
+					</control>
+					
+					<control type="list" id="8800">
+						<posx>0</posx>
+						<posy>8</posy>
+						<width>1300</width>
+						<height>75</height>
+						<onup>100</onup>
+						<ondown>200</ondown>
+						<itemgap>2</itemgap>
+						<orientation>horizontal</orientation>
+												
+						<itemlayout width="158">
+							<control type="label">
+								<posx>89</posx>
+								<posy>0</posy>
+								<font>Small</font>
+								<width>158</width>
+								<align>center</align>
+								<textcolor>ElementGray</textcolor>
+								<shadowcolor>ElementWhite</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						
+						<focusedlayout width="158">
+							<control type="image">
+								<posx>10</posx>
+								<posy>3</posy>
+								<width>158</width>
+								<height>59</height>
+								<align>center</align>
+								<texture>other_textures/ButtonFO_half.png</texture>
+							</control>
+							<control type="label">
+								<posx>89</posx>
+								<posy>0</posy>
+								<font>SmallBold</font>
+								<width>158</width>
+								<align>center</align>
+								<textcolor>ElementGray</textcolor>
+								<shadowcolor>ElementWhite</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						
+						<content>
+							<item id="11">
+								<label>$INFO[Skin.String(Home1)]</label>
+								<onclick>-</onclick>
+							</item>
+							<item id="22">
+								<label>$INFO[Skin.String(Home2)]</label>
+								<onclick>-</onclick>
+							</item>
+							<item id="33">
+								<label>$INFO[Skin.String(Home3)]</label>
+								<onclick>-</onclick>
+							</item>
+							<item id="44">
+								<label>$INFO[Skin.String(Home4)]</label>
+								<onclick>-</onclick>
+							</item>
+							<item id="55">
+								<label>$INFO[Skin.String(Home5)]</label>
+								<onclick>-</onclick>
+							</item>
+							<item id="66">
+								<label>$INFO[Skin.String(Home6)]</label>
+								<onclick>-</onclick>
+							</item>
+							<item id="77">
+								<label>$INFO[Skin.String(Home7)]</label>
+								<onclick>-</onclick>
+							</item>
+						</content>
+					</control>	
+				</control>
+			<control type="group">
+				<posx>160</posx>
+				<posy>60</posy>
+				<control type="image">
+					<posx>550</posx>
+					<posy>420</posy>
+					<width>500</width>
+					<height>280</height>
+					<texture border="50" background="true">views/bottom.png</texture>
+				</control>
+				<control type="grouplist" id="200">
+					<description>Control Area</description>
+					<posx>600</posx>
+					<posy>450</posy>
+					<width>400</width>
+					<height>685</height>
+					<itemgap>3</itemgap>
+					<onleft>8800</onleft>
+					<onright>8800</onright>
+					<onup>8800</onup>
+					<ondown>200</ondown>
+					<orientation>vertical</orientation>
+					<visible>Container(100).Hasfocus(1)</visible>
+						
+						<control type="button" id="801">
+							<description>Home1 Label</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31068]]</label>
+							<onclick>Skin.SetString(Home1)</onclick>
+							<visible>Container(8800).Position(0)</visible>
+						</control>
+						<control type="button" id="802">
+							<description>Home1 Path</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31069]]</label>
+							<onclick>Skin.SetString(CurrentItem,Home1Path)</onclick>
+							<onclick>ActivateWindow(1640)</onclick>
+							<visible>Container(8800).Position(0)</visible>
+						</control>
+						<control type="button" id="803">
+							<description>Home1 Backgrounds</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31070]]</label>
+							<onclick>Skin.SetPath(Home1Back)</onclick>
+							<visible>Container(8800).Position(0)</visible>
+						</control>
+						
+						
+						<control type="button" id="804">
+							<description>Home2 Label</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31068]]</label>
+							<onclick>Skin.SetString(Home2)</onclick>
+							<visible>Container(8800).Position(1)</visible>
+						</control>
+						<control type="button" id="805">
+							<description>Home2 Path</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31069]]</label>
+							<onclick>Skin.SetString(CurrentItem,Home2Path)</onclick>
+							<onclick>ActivateWindow(1640)</onclick>
+							<visible>Container(8800).Position(1)</visible>
+						</control>
+						<control type="button" id="806">
+							<description>Home2 Backgrounds</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31070]]</label>
+							<onclick>Skin.SetPath(Home2Back)</onclick>
+							<visible>Container(8800).Position(1)</visible>
+						</control>
+						
+						
+						<control type="button" id="807">
+							<description>Home3 Label</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31068]]</label>
+							<onclick>Skin.SetString(Home3)</onclick>
+							<visible>Container(8800).Position(2)</visible>
+						</control>
+						<control type="button" id="808">
+							<description>Home3 Path</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31069]]</label>
+							<onclick>Skin.SetString(CurrentItem,Home3Path)</onclick>
+							<onclick>ActivateWindow(1640)</onclick>
+							<visible>Container(8800).Position(2)</visible>
+						</control>
+						<control type="button" id="809">
+							<description>Home3 Backgrounds</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31070]]</label>
+							<onclick>Skin.SetPath(Home3Back)</onclick>
+							<visible>Container(8800).Position(2)</visible>
+						</control>
+						
+						
+						<control type="button" id="810">
+							<description>Home4 Label</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31068]]</label>
+							<onclick>Skin.SetString(Home4)</onclick>
+							<visible>Container(8800).Position(3)</visible>
+						</control>
+						<control type="button" id="811">
+							<description>Home4 Path</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31069]]</label>
+							<onclick>Skin.SetString(CurrentItem,Home4Path)</onclick>
+							<onclick>ActivateWindow(1640)</onclick>
+							<visible>Container(8800).Position(3)</visible>
+						</control>
+						<control type="button" id="812">
+							<description>Home4 Backgrounds</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31070]]</label>
+							<onclick>Skin.SetPath(Home4Back)</onclick>
+							<visible>Container(8800).Position(3)</visible>
+						</control>
+						
+						
+						<control type="button" id="813">
+							<description>Home5 Label</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31068]]</label>
+							<onclick>Skin.SetString(Home5)</onclick>
+							<visible>Container(8800).Position(4)</visible>
+						</control>
+						<control type="button" id="814">
+							<description>Home5 Path</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31069]]</label>
+							<onclick>Skin.SetString(CurrentItem,Home5Path)</onclick>
+							<onclick>ActivateWindow(1640)</onclick>
+							<visible>Container(8800).Position(4)</visible>
+						</control>
+						<control type="button" id="815">
+							<description>Home5 Backgrounds</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31070]]</label>
+							<onclick>Skin.SetPath(Home5Back)</onclick>
+							<visible>Container(8800).Position(4)</visible>
+						</control>
+						
+						
+						<control type="button" id="816">
+							<description>Home6 Label</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31068]]</label>
+							<onclick>Skin.SetString(Home6)</onclick>
+							<visible>Container(8800).Position(5)</visible>
+						</control>
+						<control type="button" id="817">
+							<description>Home6 Path</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31069]]</label>
+							<onclick>Skin.SetString(CurrentItem,Home6Path)</onclick>
+							<onclick>ActivateWindow(1640)</onclick>
+							<visible>Container(8800).Position(5)</visible>
+						</control>
+						<control type="button" id="818">
+							<description>Home1 Backgrounds</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31070]]</label>
+							<onclick>Skin.SetPath(Home6Back)</onclick>
+							<visible>Container(8800).Position(5)</visible>
+						</control>
+						
+						<control type="button" id="819">
+							<description>Home7 Label</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31068]]</label>
+							<onclick>Skin.SetString(Home7)</onclick>
+							<visible>Container(8800).Position(6)</visible>
+						</control>
+						<control type="button" id="820">
+							<description>Home7 Path</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31069]]</label>
+							<onclick>Skin.SetString(CurrentItem,Home7Path)</onclick>
+							<onclick>ActivateWindow(1640)</onclick>
+							<visible>Container(8800).Position(6)</visible>
+						</control>
+						<control type="button" id="821">
+							<description>Home7 Backgrounds</description>
+							<textcolor>White</textcolor>
+							<focusedcolor>White</focusedcolor>
+							<shadowcolor>ElementGray</shadowcolor>
+							<texturefocus border="15,5,15,5">other_textures/ButtonFO_half.png</texturefocus>
+							<texturenofocus border="15,5,15,5">none</texturenofocus>
+							<align>center</align>
+							<width>400</width>
+							<label>$INFO[Container(8800).ListItem.Label,$LOCALIZE[31067] , $LOCALIZE[31070]]</label>
+							<onclick>Skin.SetPath(Home7Back)</onclick>
+							<visible>Container(8800).Position(6)</visible>
+						</control>
+
+					
 				</control>
 			</control>
+		</control>	
 		</control>
 	</controls>
 </window>

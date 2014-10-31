@@ -20,17 +20,17 @@
   <string id="31016">Background Visuals</string>
   <string id="31017">Lyrics/Subtitles</string>
   <string id="31018">Current Selected</string>
-  <string id="31019">Open playlist</string>
-  <string id="31020">Save playlist</string>
-  <string id="31021">Close playlist</string>
+  <string id="31019">Playlist öffnen</string>
+  <string id="31020">Playlist speichern</string>
+  <string id="31021">Playlist schließen</string>
   <string id="31022">System music files</string>
   <string id="31023">Disable Background Visualiser</string>
   <string id="31024">Disable Background Video</string>
   <string id="31025">Click to change default Lyrics script</string>
   <string id="31026">Click to change default Subtitles script</string>
-  <string id="31027">Items</string>
-  <string id="31028">Page</string>
-  <string id="31029">Current playlist</string>
+  <string id="31027">Elemente</string>
+  <string id="31028">Seite</string>
+  <string id="31029">Aktuelle Playlist</string>
   <string id="31030">Memory Used</string>
   <string id="31031">Karaoke Song Selector</string>
   <string id="31032">Visualization Presets</string>
@@ -42,7 +42,7 @@
   <string id="31038">Stop</string>
   <string id="31039">Fast Forward</string>
   <string id="31040">Visualisation Presets</string>
-  <string id="31041">DVD Menu</string>
+  <string id="31041">DVD Menü</string>
   <string id="31042">Filme</string>
   <string id="31043">TV-Serien</string>
   <string id="31044">Dokus</string>
@@ -64,4 +64,27 @@
   <string id="31060">Bibliothek aktualisieren</string>
   <string id="31061">Lade...</string>
   <string id="31062">Einstellungen</string>
+  <string id="31063">.element Einstellungen</string>
+  <string id="31064">Eigene Playlist</string>
+  <string id="31065">Musik Addon</string>
+  <string id="31066">Video Addon</string>
+  <string id="31067">Ändere</string>
+  <string id="31068">Titel</string>
+  <string id="31069">Verknüpfung</string>
+  <string id="31070">Hintergrund</string>
+  <string id="31071">Home Menü</string>
+  <string id="31072">Hintergrund Optionen</string>
+  <string id="32000">Die Darstellungseinstellungen ermöglichen die Auswahl von Skins und deren individuelle Anpassung. Zudem können Einstellungen wie Sprache, Region, Dateilisten und Bildschirmschoner angepasst werden.</string>
+  <string id="32001">Die Videoeinstellungen von Kodi umfassen alle Optionen für die Videobibliothek und -wiedergabe.[CR]Passe Dein System an um die beste Bildqualität zu erreichen.[CR]Auch die Wahl von Untertitelfarbe und -position ist möglich.</string>
+  <string id="32002">Die Musikoptionen umfassen alle Einstellungsmöglichkeiten für die Audiobibliothek und Musikwiedergabe.[CR]Passe Dein System an um die beste Audioqualität zu erreichen.[CR]Zudem können Optionen bezüglich Audio CDs und Karaoke angepasst werden.</string>
+  <string id="32003">Hier können Addons für das Kodi System heruntergeladen, installiert und eingestellt werden.</string>
+  <string id="32004">Die Bildoptionen ermöglichen Einstellung wie die Verwendung von EXIF Bildinformationen, die Erstellung von Thumbnails oder erweiterte Anpassungen für die Diashowanzeige.</string>
+  <string id="32005">Hier können Einstellungen für die Wettervorhersage getroffen werden. Kernfunktionen sind die Auswahl eines Plugins für die Wettervorhersage sowie die Einstellung des Standortes.</string>
+  <string id="32006">Mit Hilfe der Netzwerkeinstellungen kann der Gerätename, UPnP- / Web-Server sowie der Fernzugriff auf Kodi geregelt werden. Weitere Optionen sind die Konfiguration von Zeroconf und AirPlay.</string>
+  <string id="32007">Die Systemeinstellungen bieten zahlreiche Optionen zur Konfiguration der System-Grundfunktionen, wie Video und Audio-Hardware. Zudem können Eingabegeräte, Internetzugriff und Energiesparfunktionen konfiguriert werden.</string>
+  <string id="32008">Das Profile-Menü kann verwendet werden um zusätzliche Benutzer anzulegen. Dadurch kann eine genaue Medien-Zugriffssteuerung auf Nutzerbasis realisiert werden.</string>
+  <string id="32009">Die Systeminfo zeigt aktuelle Informationen zum Hardwarestatus (Speicherplatz, Netzwerk, Grafikkarte, Prozessorauslastung, etc.) an.</string>
+  <string id="32010">Detaileinstellungen für .element.[CR]Hier können Optionen wir Zoom & Pan für Hintergrundbilder, Startmenü Verknüpfungen und ähnliche Einstellungen vorgenommen werden.</string>
+  
+  
 </strings>

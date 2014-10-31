@@ -22,7 +22,7 @@
 		
 		<control type="grouplist" id="9000">
 			<posx>20</posx>
-			<top>15%</top>
+			<top>20%</top>
 			<aligny>top</aligny>
 			<width>400</width>
 			<height>900</height>
@@ -41,43 +41,105 @@
 			
 			<control type="button" id="2">
 				<description>View</description>
-				<width>330</width>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<font>SmallBold</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<disabledcolor>ElementWhite</disabledcolor>
+				<invalidcolor>Gray</invalidcolor>
+				<shadowcolor>ElementGray</shadowcolor>
 				<align>left</align>
+				<width>350</width>
+				<height>70</height>
 			</control>
 			<control type="button" id="3">
 				<description>Sort</description>
-				<width>330</width>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<font>SmallBold</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<disabledcolor>ElementWhite</disabledcolor>
+				<invalidcolor>Gray</invalidcolor>
+				<shadowcolor>ElementGray</shadowcolor>
 				<align>left</align>
+				<width>350</width>
+				<height>70</height>
 			</control>
 			<control type="togglebutton" id="4">
 				<description>Ascending</description>
-				<width>330</width>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<font>SmallBold</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<disabledcolor>ElementWhite</disabledcolor>
+				<invalidcolor>Gray</invalidcolor>
+				<shadowcolor>ElementGray</shadowcolor>
 				<align>left</align>
+				<width>350</width>
+				<height>70</height>
 				<label>584</label>
 				<altlabel>585</altlabel>
 			</control>
 			<control type="button" id="5">
 				<description>Files</description>
-				<width>330</width>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<font>SmallBold</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<disabledcolor>ElementWhite</disabledcolor>
+				<invalidcolor>Gray</invalidcolor>
+				<shadowcolor>ElementGray</shadowcolor>
 				<align>left</align>
+				<width>350</width>
+				<height>70</height>
 				<label>31001</label>
 				<onclick>SetFocus(50)</onclick>
 			</control>
 			<control type="button" id="8">
 				<description>Search</description>
-				<width>330</width>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<font>SmallBold</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<disabledcolor>ElementWhite</disabledcolor>
+				<invalidcolor>Gray</invalidcolor>
+				<shadowcolor>ElementGray</shadowcolor>
 				<align>left</align>
+				<width>350</width>
+				<height>70</height>
 				<label>137</label>
 			</control>
 			<control type="radiobutton" id="16">
 				<description>PartyMode</description>
-				<width>330</width>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<textureradioonfocus>views/radio_h.png</textureradioonfocus>
+				<textureradioonnofocus>views/radio_h.png</textureradioonnofocus>
+				<textureradioofffocus>views/radio_n.png</textureradioofffocus>
+				<textureradiooffnofocus>views/radio_n.png</textureradiooffnofocus>
+				<width>350</width>
 				<align>left</align>
+				<radiowidth>45</radiowidth>
+				<radioheight>45</radioheight>
+				<focusedcolor>White</focusedcolor>
 				<label>589</label>
 			</control>
 			<control type="button" id="21">
 				<description>Activate Filter</description>
-				<width>330</width>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<font>SmallBold</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<disabledcolor>ElementWhite</disabledcolor>
+				<invalidcolor>Gray</invalidcolor>
+				<shadowcolor>ElementGray</shadowcolor>
+				<width>350</width>
 				<align>left</align>
 				<label>587</label>
 				<onclick>SendClick(musiclibrary,19)</onclick>
@@ -86,7 +148,15 @@
 			</control>
 			<control type="button" id="22">
 				<description>Show Filter Label</description>
-				<width>330</width>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<font>SmallBold</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<disabledcolor>ElementWhite</disabledcolor>
+				<invalidcolor>Gray</invalidcolor>
+				<shadowcolor>ElementGray</shadowcolor>
+				<width>350</width>
 				<align>left</align>
 				<label>$LOCALIZE[587] - $INFO[Window.Property(filter)]</label>
 				<onclick>SendClick(musiclibrary,19)</onclick>
@@ -95,11 +165,37 @@
 			</control>
 			<control type="button" id="98">
 				<description>Open Player Controls</description>
-				<width>330</width>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<font>SmallBold</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<disabledcolor>ElementWhite</disabledcolor>
+				<invalidcolor>Gray</invalidcolor>
+				<shadowcolor>ElementGray</shadowcolor>
+				<width>350</width>
 				<align>left</align>
 				<label>31015</label>
 				<onclick>ActivateWindow(playercontrols)</onclick>
 				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="togglebutton" id="20">
+				<description>Update library</description>
+				<texturefocus>views/sidemenu_button_h.png</texturefocus>
+				<texturenofocus>views/sidemenu_button.png</texturenofocus>
+				<font>SmallBold</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<disabledcolor>ElementWhite</disabledcolor>
+				<invalidcolor>Gray</invalidcolor>
+				<shadowcolor>ElementGray</shadowcolor>
+				<width>350</width>
+				<align>left</align>
+				<label>653</label>
+				<altlabel>13353</altlabel>
+				<alttexturefocus border="5">button-focus.png</alttexturefocus>
+				<alttexturenofocus>-</alttexturenofocus>
+				<usealttexture>library.isscanningmusic</usealttexture>
 			</control>
 		</control>
 	</controls>

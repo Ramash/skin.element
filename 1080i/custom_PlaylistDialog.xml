@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window type="dialog" id="1640">
+	<defaultcontrol always="true">100</defaultcontrol>
+	<controls>
+		<control type="image">
+			<width>1920</width>
+			<height>1080</height>
+			<texture border="2">other_textures/black-back.png</texture>
+		</control>
+		
+		<control type="image">
+			<posx>710</posx>
+			<posy>150</posy>
+			<width>500</width>
+			<height>850</height>
+			<texture border="50" background="true">other_textures/DialogContextBack.png</texture>
+		</control>
+		
+		<control type="label">
+			<posx>710</posx>
+			<posy>180</posy>
+			<width>500</width>
+			<align>center</align>
+			<font>SmallBold</font>
+			<label>Choose shortcut</label>
+		</control>
+		
+		<control type="list" id="100">
+			<description>Control Area</description>
+			<posx>760</posx>
+			<posy>250</posy>
+			<width>400</width>
+			<height>685</height>
+			<itemgap>3</itemgap>
+			<onleft>100</onleft>
+			<onright>100</onright>
+			<onup>100</onup>
+			<ondown>100</ondown>
+			<orientation>vertical</orientation>
+		
+			<itemlayout height="75" width="360">
+				<control type="button">
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO.png</texturefocus>
+					<texturenofocus border="15,5,15,5">other_textures/ButtonNF.png</texturenofocus>
+					<align>center</align>
+					<width>400</width>
+				</control>
+				<control type="label">
+					<posx>200</posx>
+					<textcolor>ElementGray</textcolor>
+					<focusedcolor>White</focusedcolor>
+					<shadowcolor>ElementWhite</shadowcolor>
+					<align>center</align>
+					<width>400</width>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="75" width="360">
+				<control type="button">
+					<texturefocus border="15,5,15,5">other_textures/ButtonFO.png</texturefocus>
+					<texturenofocus border="15,5,15,5">other_textures/ButtonNF.png</texturenofocus>
+					<align>center</align>
+					<width>400</width>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>200</posx>
+					<textcolor>White</textcolor>
+					<focusedcolor>White</focusedcolor>
+					<shadowcolor>ElementGray</shadowcolor>
+					<align>center</align>
+					<width>400</width>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+				
+			<content>
+				<item id="101">
+					<label>31042</label>
+					<onclick>Skin.SetString($INFO[Skin.String(CurrentItem)],ActivateWindow(VideoLibrary,MovieTitles,return))</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+				</item>
+				<item id="102">
+					<label>31043</label>
+					<onclick>Skin.SetString($INFO[Skin.String(CurrentItem)],ActivateWindow(VideoLibrary,TvShowTitles,return))</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+				</item>
+				<item id="103">
+					<label>31045</label>
+					<onclick>Skin.SetString($INFO[Skin.String(CurrentItem)],ActivateWindow(pvr))</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+				</item>
+				<item id="104">
+					<label>31046</label>
+					<onclick>Skin.SetString($INFO[Skin.String(CurrentItem)],ActivateWindow(Music,musicdb://albums/))</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+				</item>
+				<item id="105">
+					<label>31048</label>
+					<onclick>Skin.SetString($INFO[Skin.String(CurrentItem)],ActivateWindow(VideoLibrary,MusicVideos,return))</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+				</item>
+				<item id="106">
+					<label>31047</label>
+					<onclick>Skin.SetString($INFO[Skin.String(CurrentItem)],ActivateWindow(Pictures))</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+				</item>
+				<item id="107">
+					<label>31066</label>
+					<onclick>Skin.SetString($INFO[Skin.String(CurrentItem)],ActivateWindow(VideoLibrary,Addons,return))</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+				</item>
+				<item id="108">
+					<label>31065</label>
+					<onclick>Skin.SetString($INFO[Skin.String(CurrentItem)],ActivateWindow(MusicLibrary,Addons,return))</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+				</item>
+				<item id="109">
+					<label>31064</label>
+					<onclick>Skin.SetFile($INFO[Skin.String(CurrentItem)],.xsp)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(CurrentItem)],ActivateWindow(VideoLibrary,$INFO[Skin.String($INFO[Skin.String(CurrentItem)])],return))</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+				</item>
+			</content>
+		</control>
+		
+
+	</controls>
+</window>
